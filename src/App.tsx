@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function Countdown() {
+
+  let weddingDate = new Date("01/11/2025");
+  let today = new Date();
+
+  let diff = weddingDate.getTime() - today.getTime();
+ 
+// To calculate the no. of days between two dates
+  let daysLeft = Math.round(diff / (1000 * 3600 * 24));
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <p className="countdown">{daysLeft}</p>
+      <p className="days">DAYS</p>
+    </div>
   )
+}
+
+function App() {
+    return (
+      <>
+        <div className="videoMask">
+          <video className="video" autoPlay muted loop playsInline>
+            <source src="https://storage.googleapis.com/wedding-web/wedding-date.MOV" type="video/mp4"/>
+          </video>
+        </div>
+        <Countdown />
+      </>
+    )
 }
 
 export default App
