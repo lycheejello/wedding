@@ -2,13 +2,10 @@ import './App.css'
 
 function Countdown() {
 
-  let weddingDate = new Date("01/11/2025");
-  let today = new Date();
-
-  let diff = weddingDate.getTime() - today.getTime();
- 
-// To calculate the no. of days between two dates
-  let daysLeft = Math.round(diff / (1000 * 3600 * 24));
+  const weddingDate = new Date("01/11/2025");
+  const today = new Date();
+  const diff = weddingDate.getTime() - today.getTime();
+  const daysLeft = Math.round(diff / (1000 * 3600 * 24));
 
   return (
     <div>
