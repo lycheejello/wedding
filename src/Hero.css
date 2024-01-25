@@ -4,15 +4,25 @@
   text-align: center;
 }
 
-.video {
-    width: 350px;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .videoMask {
     border-radius: 50px;
     overflow: hidden;
+    width: max-content;
     display: flex;
-    width: 350px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.video {
+    width: 300px;
 }
 
 .countdown {

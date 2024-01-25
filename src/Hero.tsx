@@ -1,4 +1,4 @@
-import './App.css'
+import './Hero.css'
 
 function Countdown() {
 
@@ -15,17 +15,17 @@ function Countdown() {
   )
 }
 
-function App() {
+function Hero() {
     return (
-      <>
+      <div className="hero">
         <div className="videoMask">
           <video className="video" autoPlay muted loop playsInline>
             <source src="https://storage.googleapis.com/wedding-web/wedding-date.MOV" type="video/mp4"/>
           </video>
         </div>
         <Countdown />
-      </>
+      </div>
     )
 }
 
-export default App
+export default Hero
