@@ -19,9 +19,7 @@ function Hero() {
     return (
       <div className="hero">
         <div className="videoMask">
-          <video className="video" autoPlay muted loop playsInline>
-            <source src="https://storage.googleapis.com/wedding-web/wedding-date.MOV" type="video/mp4"/>
-          </video>
+            <img src="https://storage.googleapis.com/wedding-web/wedding-date-3.gif" alt="1/11/2025" />
         </div>
         <Countdown />
       </div>
