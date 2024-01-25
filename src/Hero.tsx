@@ -8,8 +8,8 @@ function Countdown() {
   const daysLeft = Math.round(diff / (1000 * 3600 * 24));
 
   return (
-    <div>
-      <p className="countdown">{daysLeft}</p>
+    <div className="countdown">
+      <p className="daysLeft">{daysLeft}</p>
       <p className="days">DAYS</p>
     </div>
   )

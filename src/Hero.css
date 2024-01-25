@@ -13,7 +13,8 @@
 }
 
 .videoMask {
-    border-radius: 50px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
     overflow: hidden;
     width: max-content;
     display: flex;
@@ -25,18 +26,22 @@
     width: 300px;
 }
 
-.countdown {
-    font-family: Serif;
+.countdown{
+    font-family: Helvetica;
+    text-align: center;
+    margin-top: -200px;
+}
+
+.daysLeft {
     text-align: center;
     font-size: 60px;
-    margin: 0px;
-    color: #e68600;
+    font-weight: 550;
+    color: #d96400;
 }
 
 .days {
-    font-family: Serif;
-    text-align: center;
     font-size: 32px;
-    margin: -32px;
-    color: #e68600;
+    font-weight: 550;
+    color: #d96400;
+    margin-top: -80px;
 }
