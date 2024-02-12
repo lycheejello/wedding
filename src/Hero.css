@@ -13,6 +13,7 @@
 }
 
 .videoMask {
+    position: relative;
     border-top-left-radius: 250px;
     border-top-right-radius: 250px;
     overflow: hidden;
@@ -27,7 +28,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: -130px;
 }
 
 .daysLeft {
