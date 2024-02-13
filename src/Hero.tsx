@@ -10,7 +10,7 @@ function Countdown() {
   return (
     <div className="countdown">
       <p className="daysLeft">{daysLeft}</p>
-      <p className="days">DAYS</p>
+      <p className="days">DAYS TO GO</p>
     </div>
   )
 }
