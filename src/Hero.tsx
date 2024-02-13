@@ -18,8 +18,8 @@ function Countdown() {
 function Hero() {
     return (
       <div className="hero">
-        <div className="videoMask">
-            <img src="https://storage.googleapis.com/wedding-web/wedding-date-3.gif" alt="1/11/2025" />
+        <div className="gifMask">
+            <img className="gif" src="https://storage.googleapis.com/wedding-web/wedding-date-3.gif" alt="1/11/2025" />
         </div>
         <Countdown />
       </div>
