@@ -21,11 +21,14 @@
     justify-content: center;
     align-items: stretch;
     aspect-ratio: 3/4;
+    max-width: 80%;
 }
 
 .gif {
   object-fit: cover;
   object-position: 50% 100%;
+  width: 100%;
+
 }
 
 .countdown{
