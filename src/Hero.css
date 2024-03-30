@@ -1,21 +1,31 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
 }
+
 
 .hero {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    width:100%;
-    height: auto;
-    padding-top: 6rem;
+    padding-top: 4rem;
 }
 
 .heroItem {
     flex: 1 1 0px;;
+}
+
+.hero-1 {
+    width: 50%;
+    flex-grow:0;
+}
+
+.heroImgContainer {
+    width: 66%;
+    margin: 1.5rem;
 }
 
 .logo {
@@ -26,8 +36,7 @@
     left: -20px;
     float: left;
 }
-
-.png {
+.heroImg {
     width: 100%;
     height: auto;
 }
@@ -37,19 +46,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .ha {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 60%;
-    height: auto;
+    justify-content: space-around;
 }
 
-.heroItem {
-    flex: 1 1 0px;;
+.haTitle {
+    padding-bottom: 4rem;
+}
+
+.haPng {
+    width: 45%;
 }
 
 .getMarried {
@@ -67,16 +78,45 @@
     flex-direction: column;
 }
 
+.days {
+    font-family: "Audrey-Normal";
+    font-size: 1.8rem;
+    height: 0px;
+    margin-top: 0.1rem;
+}
+
 .daysLeft {
     font-family: "Goku";
-    font-size: 4.5rem;
+    font-size: 5rem;
     height: 0px;
     margin-top: 0px;
 }
 
-.days {
-    font-family: "Audrey-Normal";
-    font-size: 1.5rem;
-    height: 0px;
-    margin-top: 0.1rem;
+@media (min-width: 600px) {
+    .hero {
+        flex-direction: row;
+        width:100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .heroImgContainer {
+        margin: 0px;
+    }
+
+    .hero-1 {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .ha {
+        width: 100%;
+    }
+
+    .haTitle {
+    padding-bottom: 0px;
 }
+}
+
+
+
