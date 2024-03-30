@@ -45,6 +45,12 @@
     color: #1D332A;
     margin: -0.5rem;
     text-wrap: nowrap;
+}
+@media (min-width: 1000px) {
+    .dateText {
+        font-size: 8rem;
+
+    }
 
 }
 
@@ -52,10 +58,12 @@
     font-size: 3vw;
 }
 
-
-
 @media (min-width: 600px) {
-
+    .saveTheDateContainer {
+        width: 80%;
+        float: center;
+        margin-top: 15rem;
+    }
 }
 
 
