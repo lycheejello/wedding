@@ -38,7 +38,7 @@ function Hero() {
 
     <div className="graphicContainer">
         <picture>
-            <source className="graphic" media="(min-width:600px)" srcset="https://storage.googleapis.com/wedding-web/Graphic1.png" />
+            <source className="graphic" media="(min-width:600px)" srcSet="https://storage.googleapis.com/wedding-web/Graphic1.png" />
             <img className="graphic" src="https://storage.googleapis.com/wedding-web/Graphic2.png" />
         </picture>
     </div>
