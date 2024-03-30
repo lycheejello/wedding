@@ -17,8 +17,8 @@ function Countdown() {
 
 function Hero() {
     return (
-      <div>
-      <div className="hero">
+      <div className="heroContainer">
+        <div className="hero">
           <div className="hero-1 heroItem"/>
           <div className="heroImgContainer heroItem">
             <img className="logo" src="https://storage.googleapis.com/wedding-web/Logo160.png" alt="Huyson-Arkina" />
