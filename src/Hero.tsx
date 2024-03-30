@@ -17,6 +17,7 @@ function Countdown() {
 
 function Hero() {
     return (
+      <div>
       <div className="hero">
           <div className="hero-1 heroItem"/>
           <div className="heroImgContainer heroItem">
@@ -26,12 +27,23 @@ function Hero() {
           <div className="title heroItem">
             <div className="ha">
                 <div className="haTitle haItem">
-                    <img className="haPng" src="https://storage.googleapis.com/wedding-web/Name2.png" alt="Huyson and Arking"/>
+                    <img className="haPng" src="https://storage.googleapis.com/wedding-web/Name2.png" alt="Huyson and Arkina"/>
                     <p className="getMarried">are getting married</p>
                 </div>
                 <Countdown />
             </div>
           </div>
+      </div>
+
+
+    <div className="graphicContainer">
+        <picture>
+            <source className="graphic" media="(min-width:600px)" srcset="https://storage.googleapis.com/wedding-web/Graphic1.png" />
+            <img className="graphic" src="https://storage.googleapis.com/wedding-web/Graphic2.png" />
+        </picture>
+    </div>
+
+
       </div>
     )
 }

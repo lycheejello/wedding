@@ -92,6 +92,13 @@
     margin-top: 0px;
 }
 
+.graphic {
+    float: center;
+    width: 55%;
+    height: auto;
+    margin-top: -0.5rem;
+}
+
 @media (min-width: 600px) {
     .hero {
         flex-direction: row;
@@ -114,8 +121,16 @@
     }
 
     .haTitle {
-    padding-bottom: 0px;
-}
+        padding-bottom: 0px;
+    }
+
+    .graphic {
+        float: right;
+        width: 25%;
+        height: auto;
+        margin-top: -13rem;
+    }
+
 }
 
 
