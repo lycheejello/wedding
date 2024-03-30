@@ -52,43 +52,7 @@
     font-size: 3vw;
 }
 
-.dateMonth{
-}
 
-.dateDay{
-}
-
-
-.dateTime{
-}
-
-.counstdown{
-    color: #1D332A;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.dayss {
-    font-family: "Audrey-Normal";
-    font-size: 1.8rem;
-    height: 0px;
-    margin-top: 0.1rem;
-}
-
-.daysLseft {
-    font-family: "Goku";
-    font-size: 5rem;
-    height: 0px;
-    margin-top: 0px;
-}
-
-.graphsic {
-    float: center;
-    width: 55%;
-    height: auto;
-    margin-top: -0.5rem;
-}
 
 @media (min-width: 600px) {
 

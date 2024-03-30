@@ -3,26 +3,15 @@ import './Location.css'
 
 function Location() {
     return (
-      <div className="saveTheDateContainer">
-        <div className="left">
-            <img className="leftImg" src="https://storage.googleapis.com/wedding-web/Photo2.png" alt="Huyson-Arkina" />
-        </div>
-        <div className="topRight">
-            <div>
-                <div>
-                    <p className="dateOnAt dateText">on</p>
-                    <p className="dateText">JAN.</p>
-                </div>
-                <p className="dateText">11, 2025</p>
-                <div>
-                    <p className="dateOnAt dateText">at</p>
-                    <p className="dateText">6 pm</p>
-                </div>
-            </div>
-        </div>
-        <div className="btmRight">
-            <img className="rightImg" src="https://storage.googleapis.com/wedding-web/Photo3.png" alt="Huyson-Arkina" />
-        </div>
+      <div className="locationContainer">
+        <p className="invite inviteText">THE LAM AND VO FAMILIES</p>
+        <p className="invite inviteText">INVITE YOU TO CELEBRATE</p>
+        <p className="at inviteText">at</p>
+        <p className="gemCenter inviteText">GEM CENTER</p>
+        <p className="address inviteText">8 Nyguyen Binh Khiem</p>
+        <p className="address inviteText">Da Kao, Quan1</p>
+        <p className="address inviteText">Thanh pho Ho Chi Minh,</p>
+        <p className="address inviteText">Vietnam</p>
       </div>
     )
 }

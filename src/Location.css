@@ -1,93 +1,20 @@
-
-.saveTheDateContainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2.5rem;
+.locationContainer {
     margin-top: 4rem;
+
 }
 
-.left {
-    grid-column: 1;
-    grid-row: 1 / span 3;
-}
-
-.topRight {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: center;
-}
-
-.btmRight {
-    grid-column: 2;
-    grid-row: 3 / span 3;
-}
-
-.leftImg {
-    width: 100%;
-    height: auto;
-}
-
-.rightImg {
-    width: 100%;
-    height: auto;
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-}
-
-.dateText {
-    font-family: "Goku";
-    font-size: 12vw;
+.inviteText {
+    font-family: "Audrey-Normal";
     color: #1D332A;
     margin: -0.5rem;
     text-wrap: nowrap;
-
-}
-
-.dateOnAt{
     font-size: 3vw;
 }
 
-.dateMonth{
-}
-
-.dateDay{
-}
-
-
-.dateTime{
-}
-
-.counstdown{
-    color: #1D332A;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.dayss {
-    font-family: "Audrey-Normal";
-    font-size: 1.8rem;
-    height: 0px;
-    margin-top: 0.1rem;
-}
-
-.daysLseft {
+.gemCenter {
     font-family: "Goku";
-    font-size: 5rem;
-    height: 0px;
-    margin-top: 0px;
-}
+    font-size: 12vw;
 
-.graphsic {
-    float: center;
-    width: 55%;
-    height: auto;
-    margin-top: -0.5rem;
 }
 
 @media (min-width: 600px) {
