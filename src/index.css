@@ -9,12 +9,24 @@
     src: url("@/assets/Operetta12-Light.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Audrey-Normal";
+    src: url("@/assets/Audrey-Normal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Goku";
+    src: url("@/assets/Goku.ttf") format("truetype");
+}
+
+
+
 body {
   margin: 0;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f5e9d8
+  background-color: #ede4d3
 }
 
 

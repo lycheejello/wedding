@@ -10,7 +10,7 @@ function Countdown() {
   return (
     <div className="countdown">
       <p className="daysLeft">{daysLeft}</p>
-      <p className="days">DAYS TO GO</p>
+      <p className="days">days to go</p>
     </div>
   )
 }
@@ -18,10 +18,18 @@ function Countdown() {
 function Hero() {
     return (
       <div className="hero">
-        <div className="gifMask">
-            <img className="gif" src="https://storage.googleapis.com/wedding-web/wedding-date-3.gif" alt="1/11/2025" />
-        </div>
-        <Countdown />
+          <div className="heroItem"/>
+          <div className="heroItem pngContainer" >
+            <img className="logo" src="https://storage.googleapis.com/wedding-web/Logo160.png" alt="Huyson-Arkina" />
+            <img className="png" src="https://storage.googleapis.com/wedding-web/Photo1.png" alt="1/11/2025" />
+          </div>
+          <div className="heroItem title">
+            <div className="ha">
+                <img className="png haItem" src="https://storage.googleapis.com/wedding-web/Name2.png" alt="Huyson and Arking"/>
+                <p className="getMarried haItem">are getting married</p>
+            </div>
+          <Countdown />
+          </div>
       </div>
     )
 }
