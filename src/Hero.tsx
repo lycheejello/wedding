@@ -22,7 +22,7 @@ function Hero() {
           <div className="hero-1 heroItem"/>
           <div className="heroImgContainer heroItem">
             <img className="logo" src="https://storage.googleapis.com/wedding-web/Logo160.png" alt="Huyson-Arkina" />
-            <img className="heroImg" src="https://storage.googleapis.com/wedding-web/Photo1.png" alt="1/11/2025" />
+            <img className="heroImg" src="https://storage.googleapis.com/wedding-web/Photo1_500.png" alt="1/11/2025" />
           </div>
           <div className="title heroItem">
             <div className="ha">
@@ -38,8 +38,7 @@ function Hero() {
 
     <div className="graphicContainer">
         <picture>
-            <source className="graphic" media="(min-width:600px)" srcSet="https://storage.googleapis.com/wedding-web/Graphic1.png" />
-            <img className="graphic" src="https://storage.googleapis.com/wedding-web/Graphic2.png" />
+            <img className="graphic" src="https://storage.googleapis.com/wedding-web/Graphic1_1.png" />
         </picture>
     </div>
 
