@@ -5,22 +5,27 @@
 .inviteText {
     font-family: "Audrey-Normal";
     color: #1D332A;
-    margin: -0.5rem;
+    margin: -0.4rem;
     text-wrap: nowrap;
-    font-size: 3vw;
+    font-size: 4vw;
 }
 
 .gemCenter {
     font-family: "Goku";
     font-size: 12vw;
-
 }
 
 @media (min-width: 600px) {
     .locationContainer {
         margin-top: 12rem;
     }
+
+    .inviteText {
+        font-size: 2vw;
+    }
+
+    .gemCenter {
+        font-size: 10vw;
+    }
 }
-
-
 

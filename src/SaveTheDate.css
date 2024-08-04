@@ -53,10 +53,8 @@
 }
 @media (min-width: 1000px) {
     .dateText {
-        font-size: 8rem;
-
+        font-size: 7rem;
     }
-
 }
 
 .dateOnAt{
@@ -69,7 +67,7 @@
     }
 
     .saveTheDate {
-        width: 80%;
+        width: 75%;
     }
 }
 

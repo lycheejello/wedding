@@ -21,6 +21,10 @@
     .navContainer {
         margin-top: 12rem;
     }
+
+    .navBar {
+        max-width: 60%;
+    }
 }
 
 

@@ -4,8 +4,6 @@ import './Location.css'
 function Location() {
     return (
       <div className="locationContainer">
-        <p className="invite inviteText">THE LAM AND VO FAMILIES</p>
-        <p className="invite inviteText">INVITE YOU TO CELEBRATE</p>
         <p className="at inviteText">at</p>
         <p className="gemCenter inviteText">GEM CENTER</p>
         <p className="address inviteText">8 Nyguyen Binh Khiem</p>
