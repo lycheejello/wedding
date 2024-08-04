@@ -9,7 +9,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      'rsvp': path.resolve(__dirname, 'src', 'rsvp'),
     },
   }
 
@@ -17,7 +16,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        rsvp: resolve(__dirname, 'src', 'rsvp', 'index.html'),
+        rsvp: resolve(__dirname, 'maps', 'index.html'),
+        rsvp: resolve(__dirname, 'questions', 'index.html'),
+        rsvp: resolve(__dirname, 'rsvp', 'index.html'),
       },
     },
   },
