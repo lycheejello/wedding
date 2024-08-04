@@ -10,14 +10,14 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-  }
+  },
 
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        rsvp: resolve(__dirname, 'maps', 'index.html'),
-        rsvp: resolve(__dirname, 'questions', 'index.html'),
+        maps: resolve(__dirname, 'maps', 'index.html'),
+        questions: resolve(__dirname, 'questions', 'index.html'),
         rsvp: resolve(__dirname, 'rsvp', 'index.html'),
       },
     },
