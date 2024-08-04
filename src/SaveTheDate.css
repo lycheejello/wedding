@@ -1,5 +1,10 @@
 
 .saveTheDateContainer {
+    display: flex;
+    justify-content: center;
+
+}
+.saveTheDate {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,9 +65,11 @@
 
 @media (min-width: 600px) {
     .saveTheDateContainer {
-        width: 80%;
-        float: center;
         margin-top: 15rem;
+    }
+
+    .saveTheDate {
+        width: 80%;
     }
 }
 
