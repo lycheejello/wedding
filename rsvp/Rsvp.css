@@ -1,0 +1,15 @@
+.rsvpContainer {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.responseFrame {
+    width: 640px;
+    height: 1600px;
+    border: none;
+    marginheight: 0px;
+    marginwidth: 0px;
+
+}
+

@@ -9,8 +9,18 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-    }
+      'rsvp': path.resolve(__dirname, 'src', 'rsvp'),
+    },
   }
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        rsvp: resolve(__dirname, 'src', 'rsvp', 'index.html'),
+      },
+    },
+  },
 
 })
 
