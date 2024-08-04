@@ -1,0 +1,27 @@
+.navContainer {
+    margin-top: 4rem;
+}
+
+.navBar {
+    margin: 0 auto;
+    max-width: 80%;
+    aspect-ratio: 5;
+    background-image: url('https://storage.googleapis.com/wedding-web/Nav.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+
+.navItem {
+    flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+    .navContainer {
+        margin-top: 12rem;
+    }
+}
+
+
+
