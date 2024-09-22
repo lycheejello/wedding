@@ -1,6 +1,77 @@
-.QuestionsContainer {
-    margin-top: 6rem;
-    display: flex;
-    justify-content: center;
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Layout for the main content */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 32px;
+    border: 1px solid black;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Operetta12L";
+    color: #1D332A;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+}
+
+/* Section and paragraph styling */
+section {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    font-family: "Operetta12L";
+    color: #1D332A;
+}
+
+/* Strong emphasis for important apps */
+strong {
+    font-weight: bold;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
 
