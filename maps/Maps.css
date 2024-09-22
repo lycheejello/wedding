@@ -1,6 +1,70 @@
 .MapsContainer {
     margin-top: 6rem;
-    display: flex;
     justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin: 20px 0;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.notes {
+    font-size: 0.9em;
+    color: #555;
+}
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        font-size: 0.9em;
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+
 
