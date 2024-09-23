@@ -23,7 +23,8 @@ function Questions() {
 
         <section text-labelledby="visa">
             <h2 id="visa">Do I need a visa for Vietnam?</h2>
-            <p>Yup. Let us know if you'd like help with this.</p>
+            <p>Yes, you'll need a <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt">Vietnamese e-visa</a>. You can apply for one directly <a href="https://evisa.xuatnhapcanh.gov.vn/en_US/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu">here</a>. 
+            </p>
         </section>
 
         <section text-labelledby="transportation">
