@@ -34,7 +34,9 @@ function Questions() {
 
         <section text-labelledby="hotel-booking">
             <h2 id="hotel-booking">What hotel should I book?</h2>
-            <p>We are staying at the JW Marriott, with the group code XXXXX. If you choose to stay at a different hotel, there are a number of decent hotels by the wedding venue. </p>
+            <p>We are staying at <a href="https://www.themystdongkhoihotel.com/">The Myst Dong Khoi Hotel</a>. If you'd like to stay here, let us know and we will be able to book for you with the best rates. </p>
+            <p>Most of the family will be at <a href="https://www.marriott.com/en-us/hotels/sgnsi-sheraton-saigon-grand-opera-hotel/overview/">Sheraton Saigon Grand Opera Hotel</a>. We'll have a booking code for this one shortly. </p>
+            <p>These are the two we recommend, but there are plenty of options for your stay around here!</p> 
         </section>
 
         <section text-labelledby="apps-download">
