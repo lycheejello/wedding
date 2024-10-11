@@ -23,7 +23,7 @@ function Questions() {
 
         <section text-labelledby="visa">
             <h2 id="visa">Do I need a visa for Vietnam?</h2>
-            <p>Yes, you'll need a <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt">Vietnamese e-visa</a>. You can apply for one directly <a href="https://evisa.xuatnhapcanh.gov.vn/en_US/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu">here</a>. 
+            <p>Yes, you'll need a <a href="https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt">Vietnamese e-visa</a>. You can apply for one directly <a href="https://evisa.xuatnhapcanh.gov.vn/en_US/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu">here</a>. It usually takes 3-5 working days for an e-visa to be issued, though sometimes may take up to 10 days. 
             </p>
         </section>
 
