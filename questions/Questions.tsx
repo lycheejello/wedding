@@ -41,7 +41,7 @@ function Questions() {
 
         <section text-labelledby="apps-download">
             <h2 id="apps-download">What apps should I download?</h2>
-            <p><strong>Zalo</strong> - Messaging app of choice in Vietnam. We'll be communicating over this, so please download it!</p>
+            <p><strong>Whatapp or iMessage</strong> - We should be in communication already...</p>
             <p><strong>Grab</strong> - rideshare and food delivery. Accepts Cash. You can choose a Grab taxi for up to 3 or a Grab bike for 1.</p>
         </section>
 
