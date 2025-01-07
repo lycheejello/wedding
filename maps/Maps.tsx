@@ -40,7 +40,7 @@ function Maps() {
                 <tr>
                     <td></td>
                     <td>06:15 AM</td>
-                    <td>All Guests depart from Myst</td>
+                    <td>All Guests depart from <b>The Myst Hotel</b></td>
                     <td>Don't miss the bus!</td>
                 </tr>
                 <tr>
@@ -129,6 +129,12 @@ function Maps() {
         </div>
 
         <div>
+            <h2>Meeting Spot for Tea Ceremony Departure</h2> 
+            <h3>The Myst Dong Khoi</h3>
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=6-8-10,%20H%E1%BB%93%20Hu%E1%BA%A5n%20Nghi%E1%BB%87p,%20B%E1%BA%BFn%20Ngh%C3%A9,%20Qu%E1%BA%ADn%201,%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000,%20Vietnam+(The%20Myst%20Dong%20Khoi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
+
+        <div>
             <h2>Tea Ceremony</h2> 
             <h3>Brides's house at Củ Chi</h3> 
             <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=328%20HL2,%20phuoc%20vinh%20an,%20cu%20chi+(Bride's%20house)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
@@ -142,7 +148,7 @@ function Maps() {
         <div>
             <h2>Afterparty</h2> 
             <h3>Warning Zone mPlaza</h3> 
-            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=39%20L%C3%AA%20Du%E1%BA%A9n,%20B%E1%BA%BFn%20Ngh%C3%A9,%20Qu%E1%BA%ADn%201,%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000+(Warning%20Zone%20mPlaza)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe>
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=39%20L%C3%AA%20Du%E1%BA%A9n,%20B%E1%BA%BFn%20Ngh%C3%A9,%20Qu%E1%BA%ADn%201,%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000+(Warning%20Zone%20mPlaza)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
 
     </div>
