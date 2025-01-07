@@ -46,7 +46,7 @@ function Maps() {
                 <tr>
                     <td></td>
                     <td>06:30 AM</td>
-                    <td>Family to departs from Sheraton</td>
+                    <td>Family to depart from Sheraton</td>
                     <td>Don't leave Huyson behind.</td>
                 </tr>
                 <tr>
