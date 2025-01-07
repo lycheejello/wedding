@@ -60,6 +60,13 @@ function Maps() {
                 </tr>
                 <tr>
                     <td></td>
+                    <td>11:00 AM</td>
+                    <td>Return to Hotel</td>
+                    <td>Take some time to rest and relax or go out and explore before the reception.<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td>06:00 PM</td>
                     <td>Cocktail hour</td>
                     <td>GEM Center. Free flow beer.<br />
