@@ -107,6 +107,7 @@ function Maps() {
                     <td>2:00 PM</td>
                     <td>Cà phê trứng class</td>
                     <td>Learn how to make Egg Coffee!<br />
+                        <span class="notes"><a href="https://experiences.lacaph.com/">Egg Coffee Website</a></span>
                     </td>
                 </tr>
 
@@ -114,7 +115,8 @@ function Maps() {
                     <td></td>
                     <td>6:00 PM</td>
                     <td>Noir: Dining in the dark</td>
-                    <td>Pitch black dining room. Blind staff.<br />
+                    <td>Pitch black dining room. <br />
+                        <span class="notes"><a href="https://www.noirdininginthedark.com/dining-in-the-dark/how-it-works-dos-don-ts.html">How it works</a></span>
                     </td>
                 </tr>
 
@@ -151,6 +153,11 @@ function Maps() {
             <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=39%20L%C3%AA%20Du%E1%BA%A9n,%20B%E1%BA%BFn%20Ngh%C3%A9,%20Qu%E1%BA%ADn%201,%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000+(Warning%20Zone%20mPlaza)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
         </div>
 
+        <div>
+            <h2>Afterparty</h2> 
+            <h3>Warning Zone mPlaza</h3> 
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=6-8-10,%20H%E1%BB%93%20Hu%E1%BA%A5n%20Nghi%E1%BB%87p,%20B%E1%BA%BFn%20Ngh%C3%A9,%20Qu%E1%BA%ADn%201,%20H%E1%BB%93%20Ch%C3%AD%20Minh%20700000,%20Vietnam+(Egg%20Coffee)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
     </div>
 
     </body>
