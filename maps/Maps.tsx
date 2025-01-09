@@ -20,7 +20,7 @@ function Maps() {
                     <td><b>Jan 10, Friday</b></td>
                     <td>03:30 PM</td>
                     <td>Rehearsal</td>
-                    <td>For the family.<br /></td>
+                    <td>For the family. Meet at <b>Sheraton Lobby</b><br /></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -40,8 +40,10 @@ function Maps() {
                 <tr>
                     <td></td>
                     <td>06:15 AM</td>
-                    <td>All Guests depart from <b>The Myst Hotel</b></td>
-                    <td>Don't miss the bus!</td>
+                    <td>All Guests head to Tea Ceremony</td>
+                    <td>Departs from <b>The Myst Hotel</b>. Don't miss the bus!<br />
+                    <span class="notes">Approx. 90 minutes</span>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -63,6 +65,7 @@ function Maps() {
                     <td>11:00 AM</td>
                     <td>Return to Hotel</td>
                     <td>Take some time to rest and relax or go out and explore before the reception.<br />
+                        <span class="notes">Approx. 90 minutes</span>
                     </td>
                 </tr>
                 <tr>
