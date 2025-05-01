@@ -1,0 +1,11 @@
+
+.footerLink {
+    display: flex;
+    justify-content: center;
+}
+
+.foot-logo {
+    width: 10%;
+    margin: 15% 30%;
+}
+

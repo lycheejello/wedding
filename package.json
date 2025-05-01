@@ -1,9 +1,9 @@
 {
   "name": "wedding",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
-  "homepage": "https://www.huysonxarkina.com/",
+  "homepage": "https://www.huyson-arkina.com/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

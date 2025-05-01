@@ -59,7 +59,7 @@
 }
 
 .haTitle {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .haPng {
@@ -93,6 +93,14 @@
     font-size: 5rem;
     height: 0px;
     margin-top: 0px;
+}
+
+.thankYou {
+    font-family: "Audrey-Normal";
+    font-size: 2rem;
+    height: 0px;
+    margin-top: 0.1rem;
+    padding-bottom: 4rem;
 }
 
 .graphic {

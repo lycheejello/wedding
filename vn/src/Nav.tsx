@@ -6,9 +6,9 @@ function Nav() {
       <div className="navContainer">
           <div className="navBar">
             <div className="navItem" />
-            <a className="navItem" href="/maps/" />
-            <a className="navItem" href="/questions/" />
-            <a className="navItem" href="/rsvp/" />
+            <a className="navItem" href="/vn/maps/" />
+            <a className="navItem" href="/vn/questions/" />
+            <a className="navItem" href="/vn/rsvp/" />
             <div className="navItem"/>
           </div>
       </div>
