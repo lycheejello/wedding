@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+  }
+  
+  #parallax-root {
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 10px; /* Adjust for parallax intensity */
+  }
