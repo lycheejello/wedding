@@ -1,38 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+export enum ContentAlignment {
+  TopLeft, 
+  Center,
+}
+
 interface ParallaxSectionProps {
   id: string;
   backgroundImage: string;
-  imageType: 'jpg' | 'svg';
   speed?: number;
   bgSpeed?: number;
-  children: React.ReactNode;
+  content1?: string;
+  c1Alignment?: ContentAlignment;
+  content2?: string;
+  c2Alignment?: ContentAlignment;
 }
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   id,
   backgroundImage,
-  imageType,
   speed = 0.5,
   bgSpeed = 0.2,
-  children,
+  content1,
+  c1Alignment = ContentAlignment.Center,
+  content2,
+  c2Alignment = ContentAlignment.Center,
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const [bgOffset, setBgOffset] = useState(0);
-    const proot = document.querySelector('div#parallax-root');
+  const proot = document.querySelector('div#parallax-root');
 
   useEffect(() => {
     const handleScroll = () => {
+
+      if (!proot) {
+        return;
+      }
+
       if (sectionRef.current) {
         const sectionTop = sectionRef.current.offsetTop;
         const sectionHeight = sectionRef.current.offsetHeight;
         const viewportHeight = proot?.clientHeight;
         const scrollPosition = proot?.scrollTop;
-        console.log(scrollPosition);
+
 
         // Calculate when the section is in view (adjust thresholds as needed)
-        if (scrollPosition + viewportHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (scrollPosition + 1  > sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setOffset((scrollPosition - sectionTop) * speed);
           setBgOffset((scrollPosition - sectionTop) * bgSpeed);
         } else if (scrollPosition < sectionTop) {
@@ -42,70 +56,99 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
           setOffset((sectionTop + sectionHeight - viewportHeight) * speed);
           setBgOffset((sectionTop + sectionHeight - viewportHeight) * bgSpeed);
         }
-        console.log(offset, bgOffset);
       }
     };
 
-
-    if (proot) {
-      proot.addEventListener('scroll', handleScroll);
-
-      return () => {
-        proot.removeEventListener('scroll', handleScroll);
-      };
+    if (!proot) {
+      return;
     }
+
+    proot.addEventListener('scroll', handleScroll);
+
+    return () => {
+      proot.removeEventListener('scroll', handleScroll);
+    }
+
   }, [speed, bgSpeed]);
+  
+  const sectionStyle: React.CSSProperties = {
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100vw',
+    transformStyle: 'preserve-3d',
+  };
 
   const bgStyle: React.CSSProperties = {
-    position: 'absolute',
+    display: 'block',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundImage: `url('${backgroundImage}')`,
-    backgroundRepeat: 'no-repeat',
-    transform: `translateZ(-5px) translateY(${bgOffset}px) scale(1.5)`,
+    //backgroundImage: `url('${backgroundImage}')`,
+    //backgroundRepeat: 'no-repeat',
+    maxWidth: '100%',
+    width: 'auto',
+    height: 'auto',
+    transform: `translateY(${bgOffset}px) scale(1)`,
     zIndex: -1,
 };
 
-if (imageType === 'svg') {
-    bgStyle.backgroundPosition = 'center';
-    bgStyle.width = '100%';
-} else if (imageType === 'jpg') {
-    bgStyle.backgroundSize = 'cover';
-    bgStyle.backgroundPosition = 'center';
+const contentStyle: React.CSSProperties = {
+    position: 'absolute',
+    backgroundColor: 'rgba(255, 0, 255, 0.5)',
+    width: '30%',
+    zIndex: 1,
+    transform: `translateY(${offset}px)`,
+}
+
+const c1Style = structuredClone(contentStyle);
+const c2Style = structuredClone(contentStyle);
+
+setContentStyle(c1Style, c1Alignment);
+setContentStyle(c2Style, c2Alignment);
+
+function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment) {
+  switch (alignment) {
+    case ContentAlignment.TopLeft:
+      style.top = '0';
+      style.left = '0';
+      break;
+    case ContentAlignment.Center:
+      style.top = 'auto';
+      style.left = 'auto';
+      break;
+  }
+    
 }
 
   return (
     <div
       ref={sectionRef}
       id={id}
-      style={{
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        transformStyle: 'preserve-3d',
-        overflow: 'hidden', // To contain the absolute positioned background
-      }}
+      style={sectionStyle}
     >
-      <div
-          style={bgStyle}
+      <img
+        src={backgroundImage}
+        style={bgStyle}
       />
       <div
-        className="content"
-        style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-          padding: '20px',
-          borderRadius: '8px',
-          fontSize: '2em',
-          textAlign: 'center',
-          zIndex: 1,
-          transform: `translateY(${offset}px)`,
-        }}
+        className="content1"
+        style={c1Style}
       >
-        {children}
+        <img 
+          src={content1}
+        />
+      </div>
+
+      <div
+        className="content2"
+        style={c2Style}
+      >
+        <img 
+          src={content2}
+        />
       </div>
     </div>
   );
