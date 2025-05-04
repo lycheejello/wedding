@@ -67,9 +67,11 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
     }
 
     proot.addEventListener('scroll', handleScroll);
+    proot.addEventListener('touchmove', handleScroll);
 
     return () => {
       proot.removeEventListener('scroll', handleScroll);
+      proot.removeEventListener('touchmove', handleScroll);
     }
 
   }, [speed, bgSpeed]);
@@ -102,7 +104,7 @@ function setContentStyle(alignment: ContentAlignment) {
   const style: React.CSSProperties = {
     transform: `translateY(${offset}px)`,
   }
-  
+
   switch (alignment) {
     case ContentAlignment.TopLeft:
       style.top = '0';
