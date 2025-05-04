@@ -37,3 +37,15 @@ body {
     height: auto;
     z-index: 1;
 }
+
+@media (max-width: 600px) {
+  .parallax-section {
+    height: 100vh;
+  }
+
+  .parallax-bg {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
