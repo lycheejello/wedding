@@ -49,8 +49,6 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         const viewportHeight = proot?.clientHeight;
         const scrollPosition = proot?.scrollTop + 1;
 
-        console.log(scrollPosition);
-
         if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setOffset((scrollPosition - sectionTop) * speed);
           setBgOffset((scrollPosition - sectionTop) * bgSpeed);
@@ -77,44 +75,20 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   }, [speed, bgSpeed]);
   
   const sectionStyle: React.CSSProperties = {
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100vw',
-    transformStyle: 'preserve-3d',
     zIndex: z,
   };
 
   const bgStyle: React.CSSProperties = {
-    display: 'block',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    //backgroundImage: `url('${backgroundImage}')`,
-    //backgroundRepeat: 'no-repeat',
-    maxWidth: '100%',
-    width: 'auto',
-    height: 'auto',
+
     transform: `translateY(${bgOffset}px) scale(1)`,
     zIndex: -1,
 };
 
-const contentStyle: React.CSSProperties = {
-    position: 'absolute',
-    backgroundColor: 'rgba(255, 0, 255, 0.5)',
-    width: '33%',
-    height: 'auto',
-    zIndex: 1,
-    transform: `translateY(${offset}px)`,
-}
+const c1Id = id + "-content1"
+const c2Id = id + "-content2"
 
-const c1Style = structuredClone(contentStyle);
-const c2Style = structuredClone(contentStyle);
-
-setContentStyle(c1Style, c1Alignment);
-setContentStyle(c2Style, c2Alignment);
+const c1Style = setContentStyle(c1Alignment);
+const c2Style = setContentStyle(c2Alignment);
 
 const imgStyle: React.CSSProperties = {
     maxWidth: '100%',
@@ -123,7 +97,12 @@ const imgStyle: React.CSSProperties = {
     objectFit: 'cover',
 }
 
-function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment) {
+function setContentStyle(alignment: ContentAlignment) {
+
+  const style: React.CSSProperties = {
+    transform: `translateY(${offset}px)`,
+  }
+  
   switch (alignment) {
     case ContentAlignment.TopLeft:
       style.top = '0';
@@ -146,21 +125,25 @@ function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment
       style.right = '0';
       break;
   }
-    
+
+  return style;
 }
 
   return (
     <div
       ref={sectionRef}
       id={id}
+      className="parallax-section"
       style={sectionStyle}
     >
       <img
         src={backgroundImage}
+        className="parallax-bg"
         style={bgStyle}
       />
       <div
-        className="content1"
+        className="parallax-content"
+        id={c1Id}
         style={c1Style}
       >
         <img 
@@ -170,7 +153,8 @@ function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment
       </div>
 
       <div
-        className="content2"
+        className="parallax-content"
+        id={c2Id}
         style={c2Style}
       >
         <img 
