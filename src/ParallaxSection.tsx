@@ -3,6 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 export enum ContentAlignment {
   TopLeft, 
   Center,
+  Right, 
+  Left, 
+  BottomRight,
 }
 
 interface ParallaxSectionProps {
@@ -14,6 +17,7 @@ interface ParallaxSectionProps {
   c1Alignment?: ContentAlignment;
   content2?: string;
   c2Alignment?: ContentAlignment;
+  z?: number;
 }
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
@@ -25,6 +29,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   c1Alignment = ContentAlignment.Center,
   content2,
   c2Alignment = ContentAlignment.Center,
+  z = 0,
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
@@ -42,11 +47,11 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         const sectionTop = sectionRef.current.offsetTop;
         const sectionHeight = sectionRef.current.offsetHeight;
         const viewportHeight = proot?.clientHeight;
-        const scrollPosition = proot?.scrollTop;
+        const scrollPosition = proot?.scrollTop + 1;
 
+        console.log(scrollPosition);
 
-        // Calculate when the section is in view (adjust thresholds as needed)
-        if (scrollPosition + 1  > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setOffset((scrollPosition - sectionTop) * speed);
           setBgOffset((scrollPosition - sectionTop) * bgSpeed);
         } else if (scrollPosition < sectionTop) {
@@ -78,6 +83,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
     justifyContent: 'center',
     width: '100vw',
     transformStyle: 'preserve-3d',
+    zIndex: z,
   };
 
   const bgStyle: React.CSSProperties = {
@@ -98,7 +104,8 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 const contentStyle: React.CSSProperties = {
     position: 'absolute',
     backgroundColor: 'rgba(255, 0, 255, 0.5)',
-    width: '30%',
+    width: '33%',
+    height: 'auto',
     zIndex: 1,
     transform: `translateY(${offset}px)`,
 }
@@ -109,6 +116,13 @@ const c2Style = structuredClone(contentStyle);
 setContentStyle(c1Style, c1Alignment);
 setContentStyle(c2Style, c2Alignment);
 
+const imgStyle: React.CSSProperties = {
+    maxWidth: '100%',
+    maxHeight: '100%',
+    height: 'auto',
+    objectFit: 'cover',
+}
+
 function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment) {
   switch (alignment) {
     case ContentAlignment.TopLeft:
@@ -118,6 +132,18 @@ function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment
     case ContentAlignment.Center:
       style.top = 'auto';
       style.left = 'auto';
+      break;
+    case ContentAlignment.Right:
+      style.top = 'auto';
+      style.right = '0';
+      break;
+    case ContentAlignment.Left:
+      style.top = 'auto';
+      style.left = '0';
+      break;
+    case ContentAlignment.BottomRight:
+      style.bottom = '0';
+      style.right = '0';
       break;
   }
     
@@ -139,6 +165,7 @@ function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment
       >
         <img 
           src={content1}
+          style={imgStyle}
         />
       </div>
 
@@ -148,6 +175,7 @@ function setContentStyle(style: React.CSSProperties, alignment: ContentAlignment
       >
         <img 
           src={content2}
+          style={imgStyle}
         />
       </div>
     </div>
