@@ -1,0 +1,50 @@
+.locationContainer {
+    margin-top: 1rem;
+    transform: scaleX(1.2);
+}
+
+.eventDateContainer {
+    margin-top: 1rem;
+    transform: scaleX(1.1);
+}
+
+.inviteText {
+    font-family: "Audrey-Normal";
+    color: #121655;
+    margin: -0.4rem;
+    text-wrap: nowrap;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 4vw;
+    line-height: 1.8;
+}
+
+.skirball {
+    font-family: "Goku";
+    font-size: 12vw;
+}
+
+.dateText {
+    font-family: "Goku";
+    font-size: 12vw;
+}
+
+@media (min-width: 800px) {
+    .locationContainer {
+        margin-top: 2rem;
+    }
+
+    .inviteText {
+        font-size: 1vw;
+    }
+
+    .skirball {
+        font-size: 3vw;
+        letter-spacing: 0.4rem;
+    }
+
+    .dateText {
+        font-size: 3vw;
+    }
+}
+

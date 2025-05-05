@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Location, EventDate } from './InviteText';
 
 export enum ContentType {
   TopLeft, 
@@ -21,18 +22,6 @@ interface ParallaxSectionProps {
   z?: number;
 }
 
-
-const TEA_CEREMONY_BUTTON = "TEA CEREMONY"
-const VENUE_INTRO = "THE LAM AND VO FAMILIES ARE THROWING A PARTY"
-const VENUE_NAME = "SKIRBALL CULTURAL CENTER"
-const VENUE_ADDRESS = "2701 N SEPULVEDA BLVD, LOS ANGELES, CA 90049"
-
-const EVENT_DATE = "NOVEMBER 1ST, 2025"
-const EVENT_TIME = "4 PM"
-
-const PHOTO_TEXT = "THERE WAS A TEA CEREMONY THAT LOOKED LIKE THIS"
-
-const MORE_INFO = "PLEASE CHECK BACK FOR MORE INFORMATION!"
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   id,
@@ -60,7 +49,6 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
       if (sectionRef.current) {
         const sectionTop = sectionRef.current.offsetTop;
         const sectionHeight = sectionRef.current.offsetHeight;
-        const viewportHeight = proot?.clientHeight;
         const scrollPosition = proot?.scrollTop + 1;
 
         if (scrollPosition > sectionTop && scrollPosition < sectionTop + sectionHeight) {
@@ -100,17 +88,36 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 const c1Id = id + "-content1"
 const c2Id = id + "-content2"
 
+
 const c1Style = setContentStyle(c1Type);
 const c2Style = setContentStyle(c2Type);
 
 const imgStyle: React.CSSProperties = {
-    maxWidth: '100%',
-    maxHeight: '100%',
-    height: 'auto',
-    objectFit: 'cover',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  height: 'auto',
+  objectFit: 'cover',
 }
 
-function setContentStyle(alignment: ContentAlignment) {
+const renderContent1 = () => {
+  switch (c1Id) {
+    case "section2-content1":
+      return <Location />
+    case "section3-content1":
+      return <EventDate />
+    default:
+      return (
+        <img 
+        src={content1}
+        style={imgStyle}
+      />
+      )
+  }
+}
+
+
+
+function setContentStyle(alignment: ContentType) {
 
   const style: React.CSSProperties = {
     transform: `translateY(${offset}px)`,
@@ -159,10 +166,7 @@ function setContentStyle(alignment: ContentAlignment) {
         id={c1Id}
         style={c1Style}
       >
-        <img 
-          src={content1}
-          style={imgStyle}
-        />
+        {renderContent1()}
       </div>
 
       <div

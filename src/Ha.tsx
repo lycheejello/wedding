@@ -40,8 +40,6 @@ function Ha() {
         id="section3" 
         speed={0.3} 
         bgSpeed={0.3}
-        content1={haName}
-        c1Type={ContentType.Center} 
         content2={skiMid}
         c2Type={ContentType.Right} 
         z={0}

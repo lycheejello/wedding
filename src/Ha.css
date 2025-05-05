@@ -49,6 +49,11 @@ body {
   transform: translateY(-40%) scaleY(1.2);
 }
 
+#section2-content1 {
+  width: 100%;
+  transform: scale(1/1.2); /* counter scale the parent */
+}
+
 #section3 {
   height: 100vh;
 }
