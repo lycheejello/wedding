@@ -3,14 +3,16 @@ import './Ha.css'
 import ParallaxContainer from './ParallaxContainer';
 import ParallaxSection from './ParallaxSection';
 import { ContentAlignment } from './ParallaxSection';
-import bg1 from '@/assets/image1.jpg'; // Import your images
-import bg2 from '@/assets/Middle1.svg';
-import bg3 from '@/assets/Middle2.svg';
-import bg4 from '@/assets/Middle1.svg';
-import bg5 from '@/assets/image1.jpg';
-import skiWindow from '@/assets/Ski_Window.svg';
-import skiLeft from '@/assets/SkiLeft.jpg';
-import skiHeart from '@/assets/SkiHeart.jpg';
+import bgSki from '@/assets/BGSki.jpg'; // Import your images
+import bg2 from '@/assets/GraphicMid1.svg';
+import bg3 from '@/assets/GraphicMid2.svg';
+import bg4 from '@/assets/GraphicMid1.svg';
+import bg5 from '@/assets/GraphicMid1.svg';
+import graphicTop from '@/assets/GraphicTop.svg';
+import graphicBottom from '@/assets/GraphicBottom.svg';
+import skiWindow from '@/assets/SkiWindow.png';
+import skiMid from '@/assets/SkiMidC.png';
+import skiHeart from '@/assets/SkiHeartC.png';
 import haName from '@/assets/HaName.png';
 
 function Ha() {
@@ -18,10 +20,10 @@ function Ha() {
     <ParallaxContainer>
       <ParallaxSection 
         id="section1" 
-        backgroundImage={bg1} 
+        backgroundImage={bgSki} 
         content1={skiWindow} 
         c1Alignment={ContentAlignment.Center} 
-        content2={skiWindow}
+        content2={graphicTop}
         c2Alignment={ContentAlignment.TopLeft} 
         speed={0.3} 
         bgSpeed={0.3}
@@ -43,7 +45,7 @@ function Ha() {
         bgSpeed={0.2}
         content1={haName}
         c1Alignment={ContentAlignment.Center} 
-        content2={skiWindow}
+        content2={skiMid}
         c2Alignment={ContentAlignment.Right} 
         z={0}
       >
@@ -53,7 +55,7 @@ function Ha() {
         backgroundImage={bg4} 
         speed={0.6} 
         bgSpeed={0.25}
-        content1={skiLeft}
+        content1={skiMid}
         c1Alignment={ContentAlignment.Center} 
         c2Alignment={ContentAlignment.Button}
         z={1}
@@ -64,9 +66,9 @@ function Ha() {
         backgroundImage={bg5} 
         speed={0.7} 
         bgSpeed={0.3}
-        content1={skiWindow}
+        content1={skiHeart}
         c1Alignment={ContentAlignment.Left}
-        content2={skiWindow}
+        content2={graphicBottom}
         c2Alignment={ContentAlignment.BottomRight}
         z={0}
       >
