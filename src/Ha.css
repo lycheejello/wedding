@@ -40,7 +40,7 @@ body {
 
 
 #section1-content1 {
-  width: 20%;
+  width: 15%;
 }
 
 #section1-content2 {
@@ -48,17 +48,18 @@ body {
 }
 
 #section2 {
-  transform: translateY(-30%);
+  transform: translateY(-40%) scaleY(1.2);
 }
 
 #section3 {
-  height: 60vh;
+  height: 100vh;
 }
 
 
 #section3-content2 {
   width: 20%;
   padding-right: 5rem;
+  padding-bottom: 5rem;
 }
 
 #section4 {
@@ -76,6 +77,8 @@ body {
 .tea-ceremony-button {
   background-color: #f2cc75;
   font-size: 0.8em;
+  font-family: "Audrey-Normal";
+  letter-spacing: 2px;
   color: #333;
   padding: 8px 16px;
   border: none;
@@ -95,8 +98,9 @@ body {
 }
 
 #section5-content1 {
-  width: 30%;
+  width: 20%;
   padding-left: 15rem;
+  padding-top: 15rem;
 }
 
 #section5-content2 {

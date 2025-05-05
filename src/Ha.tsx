@@ -50,8 +50,8 @@ function Ha() {
       <ParallaxSection 
         id="section4" 
         backgroundImage={bg4} 
-        speed={0.3} 
-        bgSpeed={0.3}
+        speed={0.6} 
+        bgSpeed={0.25}
         content1={skiMid}
         c1Alignment={ContentAlignment.Center} 
         c2Alignment={ContentAlignment.Button}
@@ -60,7 +60,7 @@ function Ha() {
       </ParallaxSection>
       <ParallaxSection 
         id="section5"  
-        speed={0.3} 
+        speed={0.7} 
         bgSpeed={0.3}
         content1={skiHeart}
         c1Alignment={ContentAlignment.Left}
