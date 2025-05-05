@@ -99,16 +99,16 @@ const imgStyle: React.CSSProperties = {
   objectFit: 'cover',
 }
 
-const renderContent1 = () => {
-  switch (c1Id) {
-    case "section2-content1":
+const renderContent2 = () => {
+  switch (c2Id) {
+    case "section2-content2":
       return <Location />
-    case "section3-content1":
+    case "section3-content2":
       return <EventDate />
     default:
       return (
         <img 
-        src={content1}
+        src={content2}
         style={imgStyle}
       />
       )
@@ -166,7 +166,10 @@ function setContentStyle(alignment: ContentType) {
         id={c1Id}
         style={c1Style}
       >
-        {renderContent1()}
+        <img 
+          src={content1}
+          style={imgStyle}
+        />
       </div>
 
       <div
@@ -174,10 +177,7 @@ function setContentStyle(alignment: ContentType) {
         id={c2Id}
         style={c2Style}
       >
-        <img 
-          src={content2}
-          style={imgStyle}
-        />
+        {renderContent2()}
         { c2Type === ContentType.Button && 
           <a href="/vn/" className="tea-ceremony-button">TEA CEREMONY</a> 
         }

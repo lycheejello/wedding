@@ -40,8 +40,8 @@ function Ha() {
         id="section3" 
         speed={0.3} 
         bgSpeed={0.3}
-        content2={skiMid}
-        c2Type={ContentType.Right} 
+        content1={skiMid}
+        c1Type={ContentType.Right} 
         z={0}
       >
       </ParallaxSection>

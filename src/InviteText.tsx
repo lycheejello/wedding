@@ -2,7 +2,7 @@ import './InviteText.css'
 
 export function Location() {
     return (
-      <div className="locationContainer">
+      <div className="eventLocationContainer">
         <p className="inviteText">THE LAM AND VO FAMILIES ARE THROWING A PARTY</p>
         <p className="inviteText">AT</p>
         <p className="skirball inviteText">SKIRBALL</p>
