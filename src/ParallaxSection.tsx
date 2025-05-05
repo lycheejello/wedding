@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export enum ContentAlignment {
+export enum ContentType {
   TopLeft, 
   Center,
   Right, 
@@ -15,11 +15,24 @@ interface ParallaxSectionProps {
   speed?: number;
   bgSpeed?: number;
   content1?: string;
-  c1Alignment?: ContentAlignment;
+  c1Type?: ContentType;
   content2?: string;
-  c2Alignment?: ContentAlignment;
+  c2Type?: ContentType;
   z?: number;
 }
+
+
+const TEA_CEREMONY_BUTTON = "TEA CEREMONY"
+const VENUE_INTRO = "THE LAM AND VO FAMILIES ARE THROWING A PARTY"
+const VENUE_NAME = "SKIRBALL CULTURAL CENTER"
+const VENUE_ADDRESS = "2701 N SEPULVEDA BLVD, LOS ANGELES, CA 90049"
+
+const EVENT_DATE = "NOVEMBER 1ST, 2025"
+const EVENT_TIME = "4 PM"
+
+const PHOTO_TEXT = "THERE WAS A TEA CEREMONY THAT LOOKED LIKE THIS"
+
+const MORE_INFO = "PLEASE CHECK BACK FOR MORE INFORMATION!"
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   id,
@@ -27,9 +40,9 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   speed = 0.5,
   bgSpeed = 0.2,
   content1,
-  c1Alignment = ContentAlignment.Center,
+  c1Type = ContentType.Center,
   content2,
-  c2Alignment = ContentAlignment.Center,
+  c2Type = ContentType.Center,
   z = 0,
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -56,7 +69,6 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         } else if (scrollPosition < sectionTop) {
           setOffset(0);
           setBgOffset(0);
-
         }
       }
     };
@@ -88,8 +100,8 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 const c1Id = id + "-content1"
 const c2Id = id + "-content2"
 
-const c1Style = setContentStyle(c1Alignment);
-const c2Style = setContentStyle(c2Alignment);
+const c1Style = setContentStyle(c1Type);
+const c2Style = setContentStyle(c2Type);
 
 const imgStyle: React.CSSProperties = {
     maxWidth: '100%',
@@ -105,23 +117,23 @@ function setContentStyle(alignment: ContentAlignment) {
   }
 
   switch (alignment) {
-    case ContentAlignment.TopLeft:
+    case ContentType.TopLeft:
       style.top = '0';
       style.left = '0';
       break;
-    case ContentAlignment.Center:
+    case ContentType.Center:
       style.top = 'auto';
       style.left = 'auto';
       break;
-    case ContentAlignment.Right:
+    case ContentType.Right:
       style.top = 'auto';
       style.right = '0';
       break;
-    case ContentAlignment.Left:
+    case ContentType.Left:
       style.top = 'auto';
       style.left = '0';
       break;
-    case ContentAlignment.BottomRight:
+    case ContentType.BottomRight:
       style.bottom = '0';
       style.right = '0';
       break;
@@ -162,7 +174,7 @@ function setContentStyle(alignment: ContentAlignment) {
           src={content2}
           style={imgStyle}
         />
-        { c2Alignment === ContentAlignment.Button && 
+        { c2Type === ContentType.Button && 
           <a href="/vn/" className="tea-ceremony-button">TEA CEREMONY</a> 
         }
       </div>

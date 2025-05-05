@@ -37,8 +37,6 @@ body {
     z-index: 1;
 }
 
-
-
 #section1-content1 {
   width: 15%;
 }
@@ -118,3 +116,24 @@ body {
   }
 }
 
+@media (max-width: 800px) {
+
+#section1-content1 {
+  width: 50%;
+}
+
+#section1-content2 {
+  width: 80%;
+}
+
+
+#section2 {
+  transform: translateY(-10%) scaleX(0.8) scaleY(1.2);
+}
+
+#section3 {
+  height: 100vh;
+}
+
+
+}
