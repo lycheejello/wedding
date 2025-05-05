@@ -1,18 +1,5 @@
+import React from 'react'
 import './Hero.css'
-
-function Countdown() {
-
-  const weddingDate = new Date("01/11/2025");
-  const today = new Date();
-  const diff = weddingDate.getTime() - today.getTime();
-  const daysLeft = Math.round(diff / (1000 * 3600 * 24));
-
-  return (
-    <div className="countdown haItem">
-      <p className="thankYou">Thank you for coming!</p>
-    </div>
-  )
-}
 
 function Hero() {
     return (
@@ -27,9 +14,8 @@ function Hero() {
             <div className="ha">
                 <div className="haTitle haItem">
                     <img className="haPng" src="https://storage.googleapis.com/wedding-web/Name2.png" alt="Huyson and Arkina"/>
-                    <p className="getMarried">are getting married</p>
+                    <p className="getMarried">had a wonderful tea ceremony</p>
                 </div>
-                <Countdown />
             </div>
           </div>
       </div>

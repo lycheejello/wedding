@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Location, EventDate } from './InviteText';
+import { Location, EventDate, Info } from './InviteText';
 
 export enum ContentType {
   TopLeft, 
@@ -115,8 +115,6 @@ const renderContent2 = () => {
   }
 }
 
-
-
 function setContentStyle(alignment: ContentType) {
 
   const style: React.CSSProperties = {
@@ -156,11 +154,15 @@ function setContentStyle(alignment: ContentType) {
       className="parallax-section"
       style={sectionStyle}
     >
-      <img
-        src={backgroundImage}
-        className="parallax-bg"
+      { backgroundImage &&
+        <img
+          src={backgroundImage}
+          className="parallax-bg"
         style={bgStyle}
-      />
+      />}
+      { id === "section5" && 
+        <Info />
+        }
       <div
         className="parallax-content"
         id={c1Id}

@@ -11,7 +11,6 @@ import graphicBottom from '@/assets/GraphicBottom.svg';
 import skiWindow from '@/assets/SkiWindow.png';
 import skiMid from '@/assets/SkiMidC.png';
 import skiHeart from '@/assets/SkiHeartC.png';
-import haName from '@/assets/HaName.png';
 
 function Ha() {
   return (
@@ -38,8 +37,7 @@ function Ha() {
       </ParallaxSection>
       <ParallaxSection 
         id="section3" 
-        speed={0.3} 
-        bgSpeed={0.3}
+        speed={0.1} 
         content1={skiMid}
         c1Type={ContentType.Right} 
         z={0}
@@ -48,8 +46,8 @@ function Ha() {
       <ParallaxSection 
         id="section4" 
         backgroundImage={bg4} 
-        speed={0.6} 
-        bgSpeed={0.25}
+        speed={0.4} 
+        bgSpeed={0.4}
         content1={skiMid}
         c1Type={ContentType.Center} 
         c2Type={ContentType.Button}
@@ -58,8 +56,8 @@ function Ha() {
       </ParallaxSection>
       <ParallaxSection 
         id="section5"  
-        speed={0.7} 
-        bgSpeed={0.3}
+        speed={0.0} 
+        bgSpeed={0.0}
         content1={skiHeart}
         c1Type={ContentType.Left}
         content2={graphicBottom}

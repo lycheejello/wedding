@@ -53,5 +53,9 @@
         letter-spacing: 0.3rem;
 
     }
+
+    .infoContainer {
+        margin-bottom: 3rem;
+    }
 }
 

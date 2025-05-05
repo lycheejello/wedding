@@ -24,3 +24,13 @@ export function EventDate() {
     )
 }
 
+
+export function Info() {
+  return (
+    <div className="infoContainer">
+      <p className="inviteText">MORE INFORMATION TO COME!</p>
+    </div>
+  )
+}
+
+

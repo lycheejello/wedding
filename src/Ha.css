@@ -149,18 +149,27 @@ body {
 #section3 {
   height: 100vh;
   flex-direction: column;
+  justify-content: center;
 }
 
 #section3-content1 {
   position: relative;
+  padding-top: 10rem;
   padding-right: 0;
   padding-bottom: 0;
-
-
+}
 
 #section3-content2 {
   position: relative;
 }
 
+#section5 {
+  flex-direction: column;
+}
 
+#section5-content1 {
+  position: relative;
+  width: 40%;
+  padding-left: 0rem;
+  padding-top: 0rem;
 }
