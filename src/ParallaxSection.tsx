@@ -6,6 +6,7 @@ export enum ContentAlignment {
   Right, 
   Left, 
   BottomRight,
+  Button,
 }
 
 interface ParallaxSectionProps {
@@ -163,6 +164,9 @@ function setContentStyle(alignment: ContentAlignment) {
           src={content2}
           style={imgStyle}
         />
+        { c2Alignment === ContentAlignment.Button && 
+          <a href="/vn/" className="tea-ceremony-button">TEA CEREMONY</a> 
+        }
       </div>
     </div>
   );

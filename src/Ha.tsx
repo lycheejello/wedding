@@ -53,8 +53,9 @@ function Ha() {
         backgroundImage={bg4} 
         speed={0.6} 
         bgSpeed={0.25}
-        content1={haName}
+        content1={skiLeft}
         c1Alignment={ContentAlignment.Center} 
+        c2Alignment={ContentAlignment.Button}
         z={1}
       >
       </ParallaxSection>

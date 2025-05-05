@@ -38,6 +38,35 @@ body {
     z-index: 1;
 }
 
+#section4 {
+  flex-direction: column;
+}
+
+/* Tea Ceremony Button */
+#section4-content2 {
+  display: flex;
+  position: relative;
+  top: -18rem;
+  justify-content: center;
+}
+    
+.tea-ceremony-button {
+  background-color: #f2cc75;
+  font-size: 0.8em;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.tea-ceremony-button:hover {
+  background-color: #f4dfb0; /* Slightly darker on hover */
+}
+
 @media (max-width: 600px) {
   .parallax-section {
     height: 100vh;
