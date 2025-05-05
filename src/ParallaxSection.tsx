@@ -158,6 +158,7 @@ function setContentStyle(alignment: ContentType) {
         <img
           src={backgroundImage}
           className="parallax-bg"
+          id={id + "-bg"}
         style={bgStyle}
       />}
       { id === "section5" && 
