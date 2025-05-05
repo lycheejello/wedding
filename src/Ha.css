@@ -32,16 +32,39 @@ body {
 
 .parallax-content {
     position: absolute;
-    background-color: rgba(255, 0, 255, 0.5);
     width: 33%;
     height: auto;
     z-index: 1;
 }
 
+
+
+#section1-content1 {
+  width: 20%;
+}
+
+#section1-content2 {
+  width: 20%;
+}
+
+#section2 {
+  transform: translateY(-30%);
+}
+
+#section3 {
+  height: 60vh;
+}
+
+
+#section3-content2 {
+  width: 20%;
+  padding-right: 5rem;
+}
+
 #section4 {
   flex-direction: column;
 }
-
+  
 /* Tea Ceremony Button */
 #section4-content2 {
   display: flex;
@@ -65,6 +88,19 @@ body {
 
 .tea-ceremony-button:hover {
   background-color: #f4dfb0; /* Slightly darker on hover */
+}
+
+#section5 {
+  height: 130vh;
+}
+
+#section5-content1 {
+  width: 30%;
+  padding-left: 15rem;
+}
+
+#section5-content2 {
+  width: 80%;
 }
 
 @media (max-width: 600px) {

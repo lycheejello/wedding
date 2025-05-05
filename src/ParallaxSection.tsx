@@ -11,7 +11,7 @@ export enum ContentAlignment {
 
 interface ParallaxSectionProps {
   id: string;
-  backgroundImage: string;
+  backgroundImage?: string;
   speed?: number;
   bgSpeed?: number;
   content1?: string;
@@ -56,9 +56,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         } else if (scrollPosition < sectionTop) {
           setOffset(0);
           setBgOffset(0);
-        } else if (scrollPosition > sectionTop + sectionHeight - viewportHeight) {
-          setOffset((sectionTop + sectionHeight - viewportHeight) * speed);
-          setBgOffset((sectionTop + sectionHeight - viewportHeight) * bgSpeed);
+
         }
       }
     };

@@ -5,9 +5,7 @@ import ParallaxSection from './ParallaxSection';
 import { ContentAlignment } from './ParallaxSection';
 import bgSki from '@/assets/BGSki.jpg'; // Import your images
 import bg2 from '@/assets/GraphicMid1.svg';
-import bg3 from '@/assets/GraphicMid2.svg';
-import bg4 from '@/assets/GraphicMid1.svg';
-import bg5 from '@/assets/GraphicMid1.svg';
+import bg4 from '@/assets/GraphicMid2.svg';
 import graphicTop from '@/assets/GraphicTop.svg';
 import graphicBottom from '@/assets/GraphicBottom.svg';
 import skiWindow from '@/assets/SkiWindow.png';
@@ -34,15 +32,14 @@ function Ha() {
         id="section2" 
         backgroundImage={bg2} 
         speed={0.3} 
-        bgSpeed={0.1}
+        bgSpeed={0.3}
         z={1}
       >
       </ParallaxSection>
       <ParallaxSection 
         id="section3" 
-        backgroundImage={bg3} 
-        speed={0.5} 
-        bgSpeed={0.2}
+        speed={0.3} 
+        bgSpeed={0.3}
         content1={haName}
         c1Alignment={ContentAlignment.Center} 
         content2={skiMid}
@@ -53,8 +50,8 @@ function Ha() {
       <ParallaxSection 
         id="section4" 
         backgroundImage={bg4} 
-        speed={0.6} 
-        bgSpeed={0.25}
+        speed={0.3} 
+        bgSpeed={0.3}
         content1={skiMid}
         c1Alignment={ContentAlignment.Center} 
         c2Alignment={ContentAlignment.Button}
@@ -63,8 +60,7 @@ function Ha() {
       </ParallaxSection>
       <ParallaxSection 
         id="section5"  
-        backgroundImage={bg5} 
-        speed={0.7} 
+        speed={0.3} 
         bgSpeed={0.3}
         content1={skiHeart}
         c1Alignment={ContentAlignment.Left}
