@@ -142,8 +142,8 @@ body {
 }
 
 #section2 {
-  transform: translateY(-20%) scaleX(2) scaleY(3);
-  height: 40%;
+  height: 50vh;
+  padding-top: 6rem;
 }
 
 #section2-content2 {
@@ -151,7 +151,9 @@ body {
 }
 
 #section2-bg {
-  object-fit: contain;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
 }
 
 #section3 {
@@ -163,7 +165,6 @@ body {
 #section3-content1 {
   position: relative;
   width: 40%;
-  padding-top: 10rem;
   padding-right: 0;
   padding-bottom: 0;
 }
@@ -173,6 +174,8 @@ body {
 }
 
 #section4 {
+  height: 60vh;
+  padding-top: 0rem;
 }
 
 .section4-content {
@@ -180,13 +183,19 @@ body {
 }
 
 #section4-bg {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 #section5 {
   flex-direction: column;
   height: 70vh;
 }
+
+#section5-content-info {
+  position: relative;
+  top: 0;
+}
+  
 
 #section5-content1 {
   position: relative;

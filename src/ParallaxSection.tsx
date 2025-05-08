@@ -176,7 +176,8 @@ function setContentStyle(alignment: ContentType) {
 
       { id === "section5" && 
           <div
-            className={id + "-content parallax-content"} 
+            id={id + "-content-info"} 
+            className={"parallax-content"} 
             style={ setContentStyle(ContentType.Center) }
           >
         <Info />

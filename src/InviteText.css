@@ -32,7 +32,7 @@
 @media (max-width: 800px) {
     #eventLocationContainer {
         margin-top: 2rem;
-        transform: scaleX(0.5) scaleY(0.3); /* Reverts scale up from parent content */
+        transform: scaleX(1.2);
     }
 
     .inviteText {
