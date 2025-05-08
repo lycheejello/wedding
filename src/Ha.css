@@ -173,6 +173,7 @@ body {
 #section3-content1 {
   position: relative;
   width: 40%;
+  padding-top: 6rem;
   padding-right: 0;
   padding-bottom: 0;
 }
@@ -186,10 +187,15 @@ body {
   padding-top: 0rem;
 }
 
-#section4-content-photos {
-  width: 90%;
+#section4-bg {
+  height: 80%;
 }
 
+#section4-content-photos {
+  padding-top: 0rem;
+  margin-top: -10rem;
+}
+  
 /* Tea Ceremony Button */
 #section4-content2 {
   display: flex;
@@ -220,12 +226,12 @@ body {
 
 #section5 {
   flex-direction: column;
-  height: 90vh;
+  height: 40vh;
 }
 
 #section5-content-info {
   position: relative;
-  padding-top: 10rem;
+  margin-top: -16rem;
 }
 
 #section5-content1 {
