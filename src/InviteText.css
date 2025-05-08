@@ -1,10 +1,9 @@
-.eventLocationContainer {
+#eventLocationContainer {
     margin-top: 1rem;
     width: 100%;
-    transform: scaleX(1.2);
 }
 
-.eventDateContainer {
+#eventDateContainer {
     margin-top: 1rem;
     transform: scaleX(1.1);
 }
@@ -31,13 +30,14 @@
 }
 
 @media (max-width: 800px) {
-    .eventLocationContainer {
+    #eventLocationContainer {
         margin-top: 2rem;
+        transform: scaleX(0.5) scaleY(0.3); /* Reverts scale up from parent content */
     }
 
     .inviteText {
         font-size: 2vw;
-        line-height: 5;
+        line-height: 4;
         letter-spacing: 0.1rem;
     }
 
@@ -54,7 +54,7 @@
 
     }
 
-    .infoContainer {
+    #infoContainer {
         margin-bottom: 3rem;
     }
 }

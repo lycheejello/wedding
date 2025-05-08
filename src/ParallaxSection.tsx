@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Location, EventDate, Info } from './InviteText';
+import { Photos } from './Photos';
 
 export enum ContentType {
   TopLeft, 
@@ -154,6 +155,7 @@ function setContentStyle(alignment: ContentType) {
       className="parallax-section"
       style={sectionStyle}
     >
+
       { backgroundImage &&
         <img
           src={backgroundImage}
@@ -161,19 +163,38 @@ function setContentStyle(alignment: ContentType) {
           id={id + "-bg"}
         style={bgStyle}
       />}
+      
+
+      { id === "section4" && 
+        <div
+          className={id + "-content parallax-content"} 
+          style={ setContentStyle(ContentType.Center) }
+        >
+        <Photos />
+        </div>
+      }
+
       { id === "section5" && 
+          <div
+            className={id + "-content parallax-content"} 
+            style={ setContentStyle(ContentType.Center) }
+          >
         <Info />
-        }
-      <div
-        className="parallax-content"
-        id={c1Id}
-        style={c1Style}
-      >
-        <img 
-          src={content1}
-          style={imgStyle}
-        />
+        </div>
+      }
+
+      { content1 &&
+        <div
+          className="parallax-content"
+          id={c1Id}
+          style={c1Style}
+        >
+          <img 
+            src={content1}
+            style={imgStyle}
+          />
       </div>
+      }
 
       <div
         className="parallax-content"
@@ -181,9 +202,6 @@ function setContentStyle(alignment: ContentType) {
         style={c2Style}
       >
         {renderContent2()}
-        { c2Type === ContentType.Button && 
-          <a href="/vn/" className="tea-ceremony-button">TEA CEREMONY</a> 
-        }
       </div>
     </div>
   );

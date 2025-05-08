@@ -30,8 +30,8 @@ function Ha() {
       <ParallaxSection 
         id="section2" 
         backgroundImage={bg2} 
-        speed={0.3} 
-        bgSpeed={0.3}
+        speed={0.2} 
+        bgSpeed={0.2}
         z={1}
       >
       </ParallaxSection>
@@ -46,11 +46,8 @@ function Ha() {
       <ParallaxSection 
         id="section4" 
         backgroundImage={bg4} 
-        speed={0.4} 
-        bgSpeed={0.4}
-        content1={skiMid}
-        c1Type={ContentType.Center} 
-        c2Type={ContentType.Button}
+        speed={0.2} 
+        bgSpeed={0.2}
         z={1}
       >
       </ParallaxSection>

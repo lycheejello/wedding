@@ -2,7 +2,7 @@ import './InviteText.css'
 
 export function Location() {
     return (
-      <div className="eventLocationContainer">
+      <div id="eventLocationContainer">
         <p className="inviteText">THE LAM AND VO FAMILIES ARE THROWING A PARTY</p>
         <p className="inviteText">AT</p>
         <p className="skirball inviteText">SKIRBALL</p>
@@ -14,7 +14,7 @@ export function Location() {
 
 export function EventDate() {
     return (
-      <div className="eventDateContainer">
+      <div id="eventDateContainer">
         <p className="inviteText">ON</p>
         <p className="dateText inviteText">NOVEMBER</p>
         <p className="dateText inviteText">1ST, 2025</p>
@@ -27,7 +27,7 @@ export function EventDate() {
 
 export function Info() {
   return (
-    <div className="infoContainer">
+    <div id="infoContainer">
       <p className="inviteText">MORE INFORMATION TO COME!</p>
     </div>
   )
