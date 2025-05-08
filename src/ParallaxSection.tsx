@@ -38,11 +38,9 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   const sectionRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const [bgOffset, setBgOffset] = useState(0);
-  const proot = document.querySelector('div#parallax-root');
 
   useEffect(() => {
     const handleScroll = () => {
-
       if (!proot) {
         return;
       }
@@ -62,7 +60,9 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
       }
     };
 
+   const proot = document.querySelector('div#parallax-root');
     if (!proot) {
+      console.log("No parallax root found");
       return;
     }
 
