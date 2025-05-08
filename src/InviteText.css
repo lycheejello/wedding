@@ -29,6 +29,15 @@
     font-size: 6vw;
 }
 
+#photosTextContainer {
+    padding-bottom: 3rem;
+}
+
+#infoContainer {
+    padding-top: 16rem;
+    padding-left: 12rem;
+}
+
 @media (max-width: 800px) {
     #eventLocationContainer {
         margin-top: 2rem;
@@ -37,7 +46,7 @@
 
     .inviteText {
         font-size: 2vw;
-        line-height: 4;
+        line-height: 3;
         letter-spacing: 0.1rem;
     }
 
@@ -55,7 +64,14 @@
     }
 
     #infoContainer {
+        padding-top: 0;
+        padding-left: 0;
         margin-bottom: 3rem;
     }
+
+    #photosTextContainer {
+        padding-bottom: 1rem;
+    }
+
 }
 

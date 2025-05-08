@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Location, EventDate, Info } from './InviteText';
+import { Location, EventDate, Info, PhotosText } from './InviteText';
 import { Photos } from './Photos';
 
 export enum ContentType {
@@ -106,6 +106,12 @@ const renderContent2 = () => {
       return <Location />
     case "section3-content2":
       return <EventDate />
+    case "section4-content2":
+      return (
+        <a href="/vn/">
+          <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
+        </a>
+      )
     default:
       return (
         <img 
@@ -167,9 +173,11 @@ function setContentStyle(alignment: ContentType) {
 
       { id === "section4" && 
         <div
-          className={id + "-content parallax-content"} 
+          id={id + "-content-photos"}
+          className={"parallax-content"} 
           style={ setContentStyle(ContentType.Center) }
         >
+        <PhotosText />
         <Photos />
         </div>
       }

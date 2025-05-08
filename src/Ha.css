@@ -49,7 +49,8 @@ body {
 }
 
 #section2 {
-  transform: translateY(-40%) scaleY(1.2);
+  transform: translateY(-35%) scaleY(1.2);
+  height: 80vh;
 }
 
 #section2-content2 {
@@ -59,6 +60,7 @@ body {
 
 #section3 {
   height: 80vh;
+  margin-top: -10rem;
 }
 
 #section3-content1 {
@@ -77,27 +79,33 @@ body {
   padding-top: 20rem;
 }
 
-.section4-content {
+#section4-bg {
+  position: absolute;
+}
+
+#section4-content-photos {
   width: 70%;
+  position: relative;
+  padding-top: 10rem;
 }
   
 /* Tea Ceremony Button */
 #section4-content2 {
   display: flex;
   position: relative;
-  top: -18rem;
   justify-content: center;
+  padding-top: 1rem;
 }
     
 .tea-ceremony-button {
   background-color: #f2cc75;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-family: "Audrey-Normal";
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   color: #333;
-  padding: 8px 16px;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.2rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -109,13 +117,13 @@ body {
 }
 
 #section5 {
-  height: 130vh;
+  height: 150vh;
 }
 
 #section5-content1 {
   width: 20%;
   padding-left: 15rem;
-  padding-top: 30rem;
+  padding-top: 35rem;
 }
 
 #section5-content2 {
@@ -174,12 +182,36 @@ body {
 }
 
 #section4 {
-  height: 60vh;
+  height: 80vh;
   padding-top: 0rem;
 }
 
-.section4-content {
+#section4-content-photos {
   width: 90%;
+}
+
+/* Tea Ceremony Button */
+#section4-content2 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding-top: 1rem;
+}
+    
+.tea-ceremony-button {
+  background-color: #f2cc75;
+  font-size: 0.6rem;
+  font-family: "Audrey-Normal";
+  letter-spacing: 0.2rem;
+  text-wrap: nowrap;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1.2rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 #section4-bg {
@@ -188,14 +220,13 @@ body {
 
 #section5 {
   flex-direction: column;
-  height: 70vh;
+  height: 90vh;
 }
 
 #section5-content-info {
   position: relative;
-  top: 0;
+  padding-top: 10rem;
 }
-  
 
 #section5-content1 {
   position: relative;

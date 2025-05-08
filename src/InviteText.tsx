@@ -33,4 +33,11 @@ export function Info() {
   )
 }
 
-
+export function PhotosText() {
+  return (
+    <div id="photosTextContainer">
+      <p className="inviteText">THEY HAD A TEA CEREMONY ON JAN 11, 2024</p>
+      <p className="inviteText">AND IT LOOKED LIKE THIS</p>
+    </div>
+  )
+}
