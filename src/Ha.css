@@ -1,13 +1,7 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    overflow-x: hidden;
-    width: 100%;
-  }
-  
   #parallax-root {
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
     perspective: 10px; /* Adjust for parallax intensity */
   }
 

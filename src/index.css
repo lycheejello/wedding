@@ -19,14 +19,13 @@
     src: url("@/assets/Goku.ttf") format("truetype");
 }
 
-
-
 body {
   margin: 0;
-  display: flex;
+  overflow-x: hidden;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ede4d3
+  background-color: #ede4d3;
 }
 
 
