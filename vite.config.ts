@@ -19,9 +19,6 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         vn: resolve(__dirname, 'vn', 'index.html'),
-        maps: resolve(__dirname, 'vn', 'maps', 'index.html'),
-        questions: resolve(__dirname, 'vn', 'questions', 'index.html'),
-        rsvp: resolve(__dirname, 'vn', 'rsvp', 'index.html'),
       },
     },
   },

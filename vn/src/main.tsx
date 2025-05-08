@@ -12,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Hero />
     <SaveTheDate />
     <Location />
-    <Nav />
     <Footer />
   </React.StrictMode>,
 )
