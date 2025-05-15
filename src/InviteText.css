@@ -22,6 +22,7 @@
 .skirball {
     font-family: "Goku";
     font-size: 3vw;
+    line-height: 1.2;
 }
 
 .dateText {
@@ -33,9 +34,17 @@
     padding-bottom: 3rem;
 }
 
+#photosTextContainer p {
+    font-size: 1.5vw;
+}
+
 #infoContainer {
     padding-top: 16rem;
     padding-left: 12rem;
+}
+
+#infoContainer p {
+    font-size: 1.5vw;
 }
 
 @media (max-width: 800px) {
@@ -80,6 +89,7 @@
 
     #photosTextContainer p {
         font-size: 3.5vw;
+        line-height: 2;
     }
 }
 

@@ -144,6 +144,12 @@
   width: 80%;
 }
 
+#footer {
+  bottom: 5rem;
+  max-width: 6%;
+  max-height: 8%;
+}
+
 @media (max-width: 800px) {
   .parallax-section {
     height: 100vh;
@@ -273,7 +279,6 @@
   bottom: 3rem;
   max-width: 10%;
   max-height: 10%;
-  height: auto;
 }
 
 }
