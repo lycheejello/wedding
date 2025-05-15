@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Location, EventDate, Info, PhotosText } from './InviteText';
 import { Photos } from './Photos';
+import LogoImg from '@/assets/Logo.svg';
+import NameImg from '@/assets/Name.png';
 
 export enum ContentType {
   TopLeft, 
@@ -102,6 +104,11 @@ const imgStyle: React.CSSProperties = {
 
 const renderContent2 = () => {
   switch (c2Id) {
+    case "section1-content2":
+      return <div id="header-container">
+        <img src={content2} style={imgStyle} />
+        <img id="header-name" src={NameImg} />
+        </div>
     case "section2-content2":
       return <Location />
     case "section3-content2":
@@ -114,10 +121,7 @@ const renderContent2 = () => {
       )
     default:
       return (
-        <img 
-        src={content2}
-        style={imgStyle}
-      />
+        <img id="default-img" src={content2}/>
       )
   }
 }
