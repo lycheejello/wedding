@@ -216,6 +216,16 @@ function setContentStyle(alignment: ContentType) {
       >
         {renderContent2()}
       </div>
+
+      { id === "section5" && 
+          <div
+            id="footer" 
+            className={"parallax-content"} 
+          >
+            <img src={LogoImg} id="footer-logo"/>
+        </div>
+      }
+
     </div>
   );
 };

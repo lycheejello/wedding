@@ -66,12 +66,20 @@
     #infoContainer {
         padding-top: 0;
         padding-left: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
+    }
+
+
+    #infoContainer p {
+        font-size: 3.5vw;
     }
 
     #photosTextContainer {
         padding-bottom: 1rem;
     }
 
+    #photosTextContainer p {
+        font-size: 3.5vw;
+    }
 }
 

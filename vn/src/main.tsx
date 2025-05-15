@@ -11,7 +11,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Hero />
     <SaveTheDate />
-    <Location />
     <Footer />
   </React.StrictMode>,
 )

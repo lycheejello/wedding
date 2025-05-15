@@ -1,6 +1,5 @@
 import './SaveTheDate.css'
 
-
 function SaveTheDate() {
     return (
       <div className="saveTheDateContainer">
@@ -15,10 +14,6 @@ function SaveTheDate() {
                       <p className="dateText">JAN.</p>
                   </div>
                   <p className="dateText">11, 2025</p>
-                  <div>
-                      <p className="dateOnAt dateText">at</p>
-                      <p className="dateText">6 pm</p>
-                  </div>
               </div>
           </div>
           <div className="btmRight">
