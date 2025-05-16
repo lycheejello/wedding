@@ -4,6 +4,7 @@ import { Photos } from './Photos';
 import { Section1 } from './Section1';
 import LogoImg from '@/assets/Logo.svg';
 import NameImg from '@/assets/Name.png';
+import { Section3 } from './Section3';
 
 export enum ContentType {
   TopLeft, 
@@ -88,42 +89,10 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
 };
 
 const c1Id = id + "-content"
-const c2Id = id + "-content2"
 
 
 const c1Style = setContentStyle(c1Type);
-const c2Style = setContentStyle(c2Type);
 
-const imgStyle: React.CSSProperties = {
-  maxWidth: '100%',
-  maxHeight: '100%',
-  height: 'auto',
-  objectFit: 'cover',
-}
-
-const renderContent2 = () => {
-  switch (c2Id) {
-    case "section1-content":
-      return <div id="header-container">
-        <img src={content2} style={imgStyle} />
-        <img id="header-name" src={NameImg} />
-        </div>
-    case "section2-content":
-      return <Location />
-    case "section3-content":
-      return <EventDate />
-    case "section4-content":
-      return (
-        <a href="/vn/">
-          <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
-        </a>
-      )
-    default:
-      return (
-        <img id="default-img" src={content2}/>
-      )
-  }
-}
 
 function ContentComponent({ section }: { section: string }) {
   switch (section) {
@@ -132,7 +101,7 @@ function ContentComponent({ section }: { section: string }) {
     case "section2-content":
       return <Location />
     case "section3-content":
-      return <EventDate />
+      return <Section3 />
     case "section4-content":
       return (
         <a href="/vn/">
@@ -150,29 +119,6 @@ function setContentStyle(alignment: ContentType) {
 
   const style: React.CSSProperties = {
     transform: `translateY(${offset}px)`,
-  }
-
-  switch (alignment) {
-    case ContentType.TopLeft:
-      style.top = '0';
-      style.left = '0';
-      break;
-    case ContentType.Center:
-      style.top = 'auto';
-      style.left = 'auto';
-      break;
-    case ContentType.Right:
-      style.top = 'auto';
-      style.right = '0';
-      break;
-    case ContentType.Left:
-      style.top = 'auto';
-      style.left = '0';
-      break;
-    case ContentType.BottomRight:
-      style.bottom = '0';
-      style.right = '0';
-      break;
   }
 
   return style;

@@ -24,7 +24,6 @@ export function EventDate() {
     )
 }
 
-
 export function Info() {
   return (
     <div id="infoContainer">

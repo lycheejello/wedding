@@ -6,7 +6,7 @@ import header from '@/assets/GraphicTop.svg';
 
 export function Section1() {
   return (
-    <div id="section1" className="content-container">
+    <div id="section1-container" className="content-container">
       <div id="header-container">
         <img id="header-img" src={header} />
         <img id="header-name" src={nameLogo} />
