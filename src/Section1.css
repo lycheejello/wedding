@@ -16,8 +16,8 @@
 }
 
 #header-name {
-  margin-top: 1.5rem;
-  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
   width: 50%;
   position: absolute;
 }
@@ -37,6 +37,11 @@
 @media (min-width: 800px) {
   #header-container {
     width: 25%;
+  }
+
+  #header-name {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
   }
 
   #window {

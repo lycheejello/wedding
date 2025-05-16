@@ -39,18 +39,16 @@
 }
 
 #section2 {
-  transform: scaleY(1.2);
-  height: 80vh;
+  transform: translateY(-15rem) scaleY(1.1);
 }
 
-#section2-bg {
-  position: absolute;
+#section2-content {
+  display: flex;
+  align-items: center;
 }
+  
 
-#section2-content2 {
-  width: 100%;
-  padding-top: 2rem;
-}
+
 
 #section3 {
   height: 80vh;

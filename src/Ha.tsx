@@ -6,9 +6,7 @@ import { ContentType } from './ParallaxSection';
 import bgSki from '@/assets/BGSki.jpg'; // Import your images
 import bg2 from '@/assets/GraphicMid1.svg';
 import bg4 from '@/assets/GraphicMid2.svg';
-import graphicTop from '@/assets/GraphicTop.svg';
 import graphicBottom from '@/assets/GraphicBottom.svg';
-import skiWindow from '@/assets/SkiWindow.png';
 import skiMid from '@/assets/SkiMidC.png';
 import skiHeart from '@/assets/SkiHeartC.png';
 
@@ -18,10 +16,6 @@ function Ha() {
       <ParallaxSection 
         id="section1" 
         backgroundImage={bgSki} 
-        content1={skiWindow} 
-        c1Type={ContentType.Center} 
-        content2={graphicTop}
-        c2Type={ContentType.TopLeft} 
         speed={0.3} 
         bgSpeed={0.3}
         z={0}
