@@ -4,6 +4,7 @@ import { PhotosSection } from './Photos';
 import { Section1 } from './Section1';
 import LogoImg from '@/assets/Logo.svg';
 import { Section3 } from './Section3';
+import { Section5 } from './Section5';
 
 interface ParallaxSectionProps {
   id: string;
@@ -91,14 +92,14 @@ function ContentComponent({ section }: { section: string }) {
       return <Section3 />
     case "section4-content":
       return <PhotosSection />
+    case "section5-content":
+      return <Section5 />
     default:
       return (
-        <div>whoa</div>
+        <div>whoa there</div>
       )
   }
 }
-
-
 
   return (
     <div
@@ -107,7 +108,6 @@ function ContentComponent({ section }: { section: string }) {
       className="parallax-section"
       style={sectionStyle}
     >
-
       { backgroundImage &&
         <img
           src={backgroundImage}
@@ -115,16 +115,6 @@ function ContentComponent({ section }: { section: string }) {
           id={id + "-bg"}
         style={bgStyle}
       />}
-      
-      { id === "section5" && 
-          <div
-            id={id + "-content-info"} 
-            className={"parallax-content"} 
-            style={ setContentStyle() }
-          >
-        <Info />
-        </div>
-      }
 
       <div
         className="parallax-content"
@@ -132,17 +122,7 @@ function ContentComponent({ section }: { section: string }) {
         style={contentStyle}
       >
         <ContentComponent section={contentId} />
-    </div>
-
-      { id === "section5" && 
-          <div
-            id="footer" 
-            className={"parallax-content"} 
-          >
-            <img src={LogoImg} id="footer-logo"/>
-        </div>
-      }
-
+      </div>
     </div>
   );
 };

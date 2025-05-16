@@ -25,29 +25,29 @@
     font-size: 5rem;
 }
 
-.eventDateContainer p {
+.event-date-container p {
     text-align: center;
 }
 
-#photosTextContainer {
+#photos-text-container {
     padding-bottom: 3rem;
 }
 
-#photosTextContainer p {
+#photos-text-container p {
     font-size: 1.5vw;
 }
 
-#infoContainer {
+#info-container {
     padding-top: 16rem;
     padding-left: 12rem;
 }
 
-#infoContainer p {
+#info-container p {
     font-size: 1.5vw;
 }
 
 @media (max-width: 1024px) {
-    #eventLocationContainer {
+    #event-location-container {
         margin-top: 2rem;
         transform: scaleX(1.2);
     }
@@ -70,21 +70,21 @@
         letter-spacing: 0.3rem;
     }
 
-    #infoContainer {
-        padding-top: 0;
+    #info-container {
+        padding-top: 30%;
         padding-left: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 
-    #infoContainer p {
+    #info-container p {
         font-size: 3.5vw;
     }
 
-    #photosTextContainer {
+    #photos-text-container {
         padding-bottom: 1rem;
     }
 
-    #photosTextContainer p {
+    #photos-text-container p {
         font-size: 3.5vw;
         line-height: 2;
     }
