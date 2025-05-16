@@ -34,7 +34,7 @@
   width: 50%;
 }
   
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   #header-container {
     width: 25%;
   }

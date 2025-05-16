@@ -22,7 +22,11 @@
 
 .dateText {
     font-family: "Goku";
-    font-size: 6vw;
+    font-size: 5rem;
+}
+
+.eventDateContainer p {
+    text-align: center;
 }
 
 #photosTextContainer {
@@ -42,7 +46,7 @@
     font-size: 1.5vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     #eventLocationContainer {
         margin-top: 2rem;
         transform: scaleX(1.2);
@@ -61,7 +65,7 @@
     }
 
     .dateText {
-        font-size: 8vw;
+        font-size: 3rem;
         line-height: 1.5;
         letter-spacing: 0.3rem;
     }

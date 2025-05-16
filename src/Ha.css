@@ -39,7 +39,7 @@
 }
 
 #section2 {
-  transform: translateY(-15rem) scaleY(1.1);
+  transform: translateY(-12rem) scaleY(1.1);
 }
 
 #section2-content {
@@ -124,7 +124,7 @@
   position: absolute;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .parallax-section {
     height: 100vh;
   }

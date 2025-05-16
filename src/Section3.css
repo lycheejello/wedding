@@ -1,3 +1,7 @@
+#section3-content {
+  width: 100%;
+}
+
 #section3-container {
   width: 100%;
   flex-direction: column;
@@ -7,14 +11,29 @@
 
 #section3-img {
   width: 40%;
+  object-fit: contain;
 }
-
   
-@media (min-width: 800px) {
-  #section3-img {
-    width: 50%;
+@media (min-width: 1024px) {
+  #section3-container {
+    flex-direction: row-reverse;
+    justify-content: space-around;
   }
 
+  #section3-img {
+    width: 15%;
+  }
 
+  #section3-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  #desktopOnly {
+    width: 15%;
+    display: block;
+  }
 }
     

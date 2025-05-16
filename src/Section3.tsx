@@ -6,7 +6,10 @@ export function Section3() {
   return (
     <div id="section3-container" className="content-container">
       <img src={SkiMid} id="section3-img" />
-      <EventDate />
+      <div id="section3-text">
+        <EventDate />
+      </div>
+      <div id="desktopOnly"></div>
     </div>
   )
   }

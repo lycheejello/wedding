@@ -21,7 +21,7 @@
     border-radius: 8px; 
   }
   
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     .photos-item {
       flex: 0 0 48%; 
       margin-bottom: 10px;
