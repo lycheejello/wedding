@@ -16,19 +16,20 @@
 
   .parallax-bg {
     display: block;
+    width: 100vw;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    width: auto;
-    height: auto;
 }
 
 .parallax-content {
     position: absolute;
     height: 100%;
     z-index: 1;
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 #default-img {

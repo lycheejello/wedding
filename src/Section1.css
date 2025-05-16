@@ -1,7 +1,5 @@
-
 #section1-content {
   width: 100%;
-  display: flex;
 }
 
 #header-container {
@@ -18,15 +16,14 @@
 }
 
 #header-name {
-  margin-top: 2rem;
-  margin-left: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
   width: 50%;
   position: absolute;
 }
 
 #window-container {
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -38,13 +35,13 @@
 }
   
 @media (min-width: 800px) {
-  #section1-content1 {
-    width: 15%;
-    padding-top: 14rem;
-    padding-bottom: 8rem;
-  }
-    
-  #section1-content2 {
+  #header-container {
     width: 25%;
   }
+
+  #window {
+    width: 15%;
+  }
+
 }
+    
