@@ -1,11 +1,12 @@
 import './Photos.css'
+import { PhotosText } from './InviteText';
 
 import photo1 from '@/assets/TeaCeremonyPhotos/1.png';
 import photo2 from '@/assets/TeaCeremonyPhotos/2.png';
 import photo3 from '@/assets/TeaCeremonyPhotos/3.png';
 import photo4 from '@/assets/TeaCeremonyPhotos/4.png';
 
-export function Photos() {
+function Photos() {
   return (
     <div id="photos-grid-container">
       <div className="photos-item">
@@ -22,7 +23,21 @@ export function Photos() {
       </div>
     </div>
   )
-  }
+}
+
+export function PhotosSection() {
+  return (
+    <div id="section4-container" className="content-container">
+      <PhotosText />
+      <Photos />
+      <div id="more-photos">
+        <a href="/vn/">
+          <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
+        </a>
+      </div>
+    </div>
+  )
+}
 
 
 

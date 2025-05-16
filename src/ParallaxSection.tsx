@@ -1,40 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Location, EventDate, Info, PhotosText } from './InviteText';
-import { Photos } from './Photos';
+import { Location, Info } from './InviteText';
+import { PhotosSection } from './Photos';
 import { Section1 } from './Section1';
 import LogoImg from '@/assets/Logo.svg';
-import NameImg from '@/assets/Name.png';
 import { Section3 } from './Section3';
-
-export enum ContentType {
-  TopLeft, 
-  Center,
-  Right, 
-  Left, 
-  BottomRight,
-  Button,
-}
 
 interface ParallaxSectionProps {
   id: string;
   backgroundImage?: string;
   speed?: number;
   bgSpeed?: number;
-  c1Type?: ContentType;
-  content2?: string;
-  c2Type?: ContentType;
   z?: number;
 }
-
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   id,
   backgroundImage,
   speed = 0.5,
   bgSpeed = 0.2,
-  c1Type = ContentType.Center,
-  content2,
-  c2Type = ContentType.Center,
   z = 0,
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -88,11 +71,15 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
     zIndex: -1,
 };
 
-const c1Id = id + "-content"
+const contentId = id + "-content"
+const contentStyle = setContentStyle();
+function setContentStyle() {
+  const style: React.CSSProperties = {
+    transform: `translateY(${offset}px)`,
+  }
 
-
-const c1Style = setContentStyle(c1Type);
-
+  return style;
+}
 
 function ContentComponent({ section }: { section: string }) {
   switch (section) {
@@ -103,26 +90,15 @@ function ContentComponent({ section }: { section: string }) {
     case "section3-content":
       return <Section3 />
     case "section4-content":
-      return (
-        <a href="/vn/">
-          <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
-        </a>
-      )
+      return <PhotosSection />
     default:
       return (
-        <img id="default-img" src={content2}/>
+        <div>whoa</div>
       )
   }
 }
 
-function setContentStyle(alignment: ContentType) {
 
-  const style: React.CSSProperties = {
-    transform: `translateY(${offset}px)`,
-  }
-
-  return style;
-}
 
   return (
     <div
@@ -140,23 +116,11 @@ function setContentStyle(alignment: ContentType) {
         style={bgStyle}
       />}
       
-
-      { id === "section4" && 
-        <div
-          id={id + "-content-photos"}
-          className={"parallax-content"} 
-          style={ setContentStyle(ContentType.Center) }
-        >
-        <PhotosText />
-        <Photos />
-        </div>
-      }
-
       { id === "section5" && 
           <div
             id={id + "-content-info"} 
             className={"parallax-content"} 
-            style={ setContentStyle(ContentType.Center) }
+            style={ setContentStyle() }
           >
         <Info />
         </div>
@@ -164,10 +128,10 @@ function setContentStyle(alignment: ContentType) {
 
       <div
         className="parallax-content"
-        id={c1Id}
-        style={c1Style}
+        id={contentId}
+        style={contentStyle}
       >
-        <ContentComponent section={c1Id} />
+        <ContentComponent section={contentId} />
     </div>
 
       { id === "section5" && 
