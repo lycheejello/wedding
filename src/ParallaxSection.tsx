@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Location, EventDate, Info, PhotosText } from './InviteText';
 import { Photos } from './Photos';
+import { Section1 } from './Section1';
 import LogoImg from '@/assets/Logo.svg';
 import NameImg from '@/assets/Name.png';
 
@@ -18,7 +19,6 @@ interface ParallaxSectionProps {
   backgroundImage?: string;
   speed?: number;
   bgSpeed?: number;
-  content1?: string;
   c1Type?: ContentType;
   content2?: string;
   c2Type?: ContentType;
@@ -31,7 +31,6 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   backgroundImage,
   speed = 0.5,
   bgSpeed = 0.2,
-  content1,
   c1Type = ContentType.Center,
   content2,
   c2Type = ContentType.Center,
@@ -88,7 +87,7 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
     zIndex: -1,
 };
 
-const c1Id = id + "-content1"
+const c1Id = id + "-content"
 const c2Id = id + "-content2"
 
 
@@ -104,16 +103,37 @@ const imgStyle: React.CSSProperties = {
 
 const renderContent2 = () => {
   switch (c2Id) {
-    case "section1-content2":
+    case "section1-content":
       return <div id="header-container">
         <img src={content2} style={imgStyle} />
         <img id="header-name" src={NameImg} />
         </div>
-    case "section2-content2":
+    case "section2-content":
       return <Location />
-    case "section3-content2":
+    case "section3-content":
       return <EventDate />
-    case "section4-content2":
+    case "section4-content":
+      return (
+        <a href="/vn/">
+          <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
+        </a>
+      )
+    default:
+      return (
+        <img id="default-img" src={content2}/>
+      )
+  }
+}
+
+function ContentComponent({ section }: { section: string }) {
+  switch (section) {
+    case "section1-content":
+      return <Section1 />
+    case "section2-content":
+      return <Location />
+    case "section3-content":
+      return <EventDate />
+    case "section4-content":
       return (
         <a href="/vn/">
           <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
@@ -196,26 +216,13 @@ function setContentStyle(alignment: ContentType) {
         </div>
       }
 
-      { content1 &&
-        <div
-          className="parallax-content"
-          id={c1Id}
-          style={c1Style}
-        >
-          <img 
-            src={content1}
-            style={imgStyle}
-          />
-      </div>
-      }
-
       <div
         className="parallax-content"
-        id={c2Id}
-        style={c2Style}
+        id={c1Id}
+        style={c1Style}
       >
-        {renderContent2()}
-      </div>
+        <ContentComponent section={c1Id} />
+    </div>
 
       { id === "section5" && 
           <div

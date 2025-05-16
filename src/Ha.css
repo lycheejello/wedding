@@ -27,8 +27,7 @@
 
 .parallax-content {
     position: absolute;
-    width: 33%;
-    height: auto;
+    height: 100%;
     z-index: 1;
 }
 
@@ -38,33 +37,13 @@
   object-fit: cover;
 }
 
-#section1-content1 {
-  width: 15%;
-  padding-top: 14rem;
-  padding-bottom: 8rem;
-}
-
-#section1-content2 {
-  width: 25%;
-}
-
-#header-container {
-  display: flex;
-  align-items: left;
-}
-
-#header-name {
-  margin-top: 2rem;
-  margin-left: 2rem;
-  max-width: 50%;
-  max-height: 50%;
-  height: auto;
-  position: absolute;
-}
-
 #section2 {
-  transform: translateY(-35%) scaleY(1.2);
+  transform: scaleY(1.2);
   height: 80vh;
+}
+
+#section2-bg {
+  position: absolute;
 }
 
 #section2-content2 {
@@ -132,26 +111,34 @@
 
 #section5 {
   height: 150vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#section5-content-info {
+  position: relative;
 }
 
 #section5-content1 {
   width: 20%;
-  padding-left: 15rem;
-  padding-top: 35rem;
+  position: relative;
 }
 
 #section5-content2 {
   display: flex;
+  position: relative;
   width: 80%;
+  right: 0;
 }
 
 #footer {
   bottom: 5rem;
-  max-width: 6%;
-  max-height: 8%;
+  width: 6%;
+  height: 8%;
+  position: absolute;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .parallax-section {
     height: 100vh;
   }
@@ -161,23 +148,7 @@
     object-fit: cover;
   }
 
-#section1-content1 {
-  width: 50%;
-  padding-top: 16rem;
-}
 
-#section1-content2 {
-  width: 50%;
-}
-
-#header-name {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  max-width: 50%;
-  max-height: 50%;
-  height: auto;
-  object-fit: cover;
-}
 
 #section2 {
   height: 50vh;
