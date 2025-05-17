@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Location, Info } from './InviteText';
+import { Location } from './InviteText';
 import { PhotosSection } from './Photos';
 import { Section1 } from './Section1';
-import LogoImg from '@/assets/Logo.svg';
 import { Section3 } from './Section3';
 import { Section5 } from './Section5';
 
