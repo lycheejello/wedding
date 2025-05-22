@@ -7,11 +7,10 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 #heart-img {
-  width: 60%;
+  width: 50%;
   margin-bottom: 10%;
   position: absolute;
   bottom: 30%;
@@ -44,7 +43,7 @@
   position: absolute;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
 
   #footer-container {
     width: 85%;

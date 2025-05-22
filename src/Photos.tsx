@@ -30,11 +30,13 @@ export function PhotosSection() {
     <div id="section4-container" className="content-container">
       <PhotosText />
       <Photos />
+      { /*
       <div id="more-photos">
         <a href="/vn/">
           <button className="tea-ceremony-button">WAY MORE PHOTOS</button>
         </a>
       </div>
+      */ }
     </div>
   )
 }

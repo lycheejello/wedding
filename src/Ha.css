@@ -39,17 +39,18 @@
 }
 
 #section2 {
-  transform: translateY(-12rem) scaleY(1.1);
+  transform: translateY(-12rem) scale(1.5, 1.6);
 }
 
 #section2-content {
   display: flex;
   align-items: center;
+  padding-top: 4rem;
 }
 
 #section3 {
-  height: 80vh;
-  transform: translateY(-6rem);
+  height: 40vw;
+  transform: translateY(-2rem);
 }
 
 #section4 {
@@ -64,13 +65,12 @@
 }
 
 #section5 {
-  height: 100vh;
+  height: 100vw;
   flex-direction: column;
   justify-content: space-between;
-  transform: translateY(35rem);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .parallax-section {
     height: 100vh;
   }
@@ -83,6 +83,7 @@
 #section2 {
   height: 50vh;
   padding-top: 6rem;
+  transform: translateY(-12rem) scale(1.2, 1.2);
 }
 
 #section2-content2 {

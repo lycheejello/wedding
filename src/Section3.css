@@ -10,11 +10,11 @@
 }
 
 #section3-img {
-  width: 40%;
+  width: 50%;
   object-fit: contain;
 }
   
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   #section3-container {
     flex-direction: row-reverse;
     justify-content: space-around;

@@ -53,11 +53,11 @@
   background-color: #f4dfb0; /* Slightly darker on hover */
 }
   
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   #section4-container {
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 60%;
   }
 
   .photos-item {

@@ -1,3 +1,11 @@
+.desktop-text {
+  display: block; 
+}
+  
+.mobile-text {
+  display: none; 
+}
+
 #eventLocationContainer {
     margin-top: 1rem;
     width: 100%;
@@ -11,18 +19,23 @@
     text-align: center;
     letter-spacing: 0.2rem;
     font-size: 1vw;
-    line-height: 1.8;
+    line-height: 2.2;
 }
 
 .skirball {
     font-family: "Goku";
     font-size: 3vw;
-    line-height: 1.2;
+    line-height: 1.6;
 }
 
 .dateText {
     font-family: "Goku";
     font-size: 5rem;
+    line-height: 1.5;
+}
+
+.sm {
+    font-size: 1.5rem;
 }
 
 .event-date-container p {
@@ -30,7 +43,7 @@
 }
 
 #photos-text-container {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 #photos-text-container p {
@@ -38,7 +51,8 @@
 }
 
 #info-container {
-    padding-top: 16rem;
+    position: absolute;
+    bottom: 40%;
     padding-left: 12rem;
 }
 
@@ -46,34 +60,44 @@
     font-size: 1.5vw;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
+   .desktop-text {
+      display: none; 
+    }
+    
+    .mobile-text {
+      display: block; 
+    }
+
     #event-location-container {
-        margin-top: 2rem;
-        transform: scaleX(1.2);
+        margin-top: -1rem;
     }
 
     .inviteText {
-        font-size: 2vw;
+        font-size: 2.8vw;
         line-height: 3;
         letter-spacing: 0.1rem;
     }
 
+    .sm {
+        font-size: 4vw;
+    }
+
     .skirball {
-        font-size: 5vw;
+        font-size: 6.5vw;
         letter-spacing: 0.3rem;
         line-height: 2;
     }
 
     .dateText {
-        font-size: 3rem;
+        font-size: 10vw;
         line-height: 1.5;
         letter-spacing: 0.3rem;
     }
 
     #info-container {
-        padding-top: 30%;
         padding-left: 0;
-        margin-bottom: 0;
+        bottom: 80%;
     }
 
     #info-container p {
