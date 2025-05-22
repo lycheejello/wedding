@@ -14,9 +14,7 @@ export function Location() {
         <p className="skirball inviteText">SKIRBALL</p>
         <p className="skirball inviteText">CULTURAL CENTER</p>
         <div className="mobile-text">
-          <p className="inviteText">2701 N SEPULVEDA BLVD</p>
-          <p className="inviteText">LOS ANGELES, CA 90049</p>
-      </div>
+       </div>
         <div className="desktop-text">
           <p className="inviteText">2701 N SEPULVEDA BLVD, LOS ANGELES, CA 90049</p>
       </div>
