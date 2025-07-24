@@ -38,7 +38,29 @@ export function EventDate() {
 export function Info() {
   return (
     <div id="info-container">
-      <p className="inviteText">MORE INFORMATION TO COME!</p>
+      <div className="hotel-section">
+        <p className="inviteText closest">CLOSEST TO WEDDING VENUE:</p>
+        <p className="inviteText hotel">W HOTEL</p>
+        <p className="inviteText hotel-address">930 HILGARD AVE, LOS ANGELES, CA 90024</p>
+        <p className="inviteText hotel">COURTYARD SHERMAN OAKS</p>
+        <p className="inviteText hotel-address">15433 VENTURA BLVD, SHERMAN OAKS, CA 91403</p>
+      </div>
+
+      <div className="hotel-section">
+        <p className="inviteText closest">CLOSE TO SANTA MONICA BEACH:</p>
+        <p className="inviteText hotel">PROPER HOTEL</p>
+        <p className="inviteText hotel-address">700 WILSHIRE BLVD, SANTA MONICA, CA 90401</p>
+        <p className="inviteText hotel">SANDBOURNE</p>
+        <p className="inviteText hotel-address">1740 OCEAN AVE, SANTA MONICA, CA 90401</p>
+      </div>
+
+      <div className="hotel-section">
+        <p className="inviteText closest">CLOSE TO HOLLYWOOD:</p>
+        <p className="inviteText hotel">WALDORF ASTORIA BEVERLY HILLS</p>
+        <p className="inviteText hotel-address">9850 WILSHIRE BLVD, BEVERLY HILLS, CA 90210</p>
+        <p className="inviteText hotel">THE WEST HOLLYWOOD EDITION</p>
+        <p className="inviteText hotel-address">9040 W SUNSET BLVD, WEST HOLLYWOOD, CA 90069</p>
+      </div>
     </div>
   )
 }

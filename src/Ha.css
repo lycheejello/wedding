@@ -65,7 +65,7 @@
 }
 
 #section5 {
-  height: 100vw;
+  height: 130vw;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -116,7 +116,7 @@
 
 #section5 {
   flex-direction: column;
-  height: 90vh;
+  height: 150vh;
 }
 
 #footer {

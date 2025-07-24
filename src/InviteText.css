@@ -34,8 +34,14 @@
     line-height: 1.5;
 }
 
-.sm {
+.closest {
+    font-family: "Goku";
     font-size: 1.5rem;
+}
+
+.hotel {
+    font-family: "Goku";
+    font-size: 1rem;
 }
 
 .event-date-container p {
@@ -56,8 +62,16 @@
     padding-left: 12rem;
 }
 
-#info-container p {
+#info-container closest {
     font-size: 1.5vw;
+}
+
+.hotel-section {
+    margin-bottom: 1.5rem;
+}
+
+.hotel-address {
+    font-size: .8vw;
 }
 
 @media (max-width: 800px) {
@@ -79,7 +93,7 @@
         letter-spacing: 0.1rem;
     }
 
-    .sm {
+    .closest {
         font-size: 4vw;
     }
 
@@ -97,12 +111,13 @@
 
     #info-container {
         padding-left: 0;
-        bottom: 80%;
+        bottom: 60%;
     }
 
-    #info-container p {
-        font-size: 3.5vw;
+    #info-container closest {
+        font-size: 1.5vw;
     }
+
 
     #photos-text-container {
         padding-bottom: 1rem;
@@ -111,6 +126,14 @@
     #photos-text-container p {
         font-size: 3.5vw;
         line-height: 2;
+    }
+
+    .hotel-section {
+        margin-bottom: 1rem;
+    }
+
+    .hotel-address {
+        font-size: 2.5vw;
     }
 }
 
