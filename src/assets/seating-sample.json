@@ -1,0 +1,10 @@
+[
+  {"name": "John Smith", "table number": "1", "meal choice": "Chicken"},
+  {"name": "Mary Johnson", "table number": "1", "meal choice": "Vegetarian"},
+  {"name": "Robert Davis", "table number": "2", "meal choice": "Beef"},
+  {"name": "Jennifer Wilson", "table number": "2", "meal choice": "Fish"},
+  {"name": "Michael Brown", "table number": "3", "meal choice": "Chicken"},
+  {"name": "Sarah Miller", "table number": "3", "meal choice": "Vegetarian"},
+  {"name": "David Jones", "table number": "4", "meal choice": "Beef"},
+  {"name": "Lisa Garcia", "table number": "4", "meal choice": "Fish"}
+]

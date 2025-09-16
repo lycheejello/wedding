@@ -1,0 +1,183 @@
+.seating-container {
+  min-height: 100vh;
+  background-color: #ede4d3;
+  padding: 2rem 1rem;
+}
+
+.seating-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seating-content h1 {
+  font-family: "Audrey-Normal", serif;
+  font-size: 3rem;
+  color: #8b7355;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-section {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem 1.5rem;
+  font-family: "Operetta12L", serif;
+  font-size: 1.1rem;
+  border: 2px solid #c4b69c;
+  border-radius: 50px;
+  background-color: #f8f5f0;
+  color: #5d4e37;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #8b7355;
+  box-shadow: 0 0 15px rgba(139, 115, 85, 0.2);
+}
+
+.search-input::placeholder {
+  color: #a89078;
+  opacity: 0.7;
+}
+
+.results-section {
+  margin-top: 2rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.guest-card {
+  background: linear-gradient(135deg, #f8f5f0 0%, #ede4d3 100%);
+  border: 1px solid #d4c7b0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.guest-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.guest-name {
+  font-family: "Audrey-Normal", serif;
+  font-size: 1.5rem;
+  color: #5d4e37;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  border-bottom: 2px solid #e0d4c0;
+  padding-bottom: 0.5rem;
+}
+
+.guest-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.detail-label {
+  font-family: "Goku", sans-serif;
+  font-size: 0.9rem;
+  color: #8b7355;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-value {
+  font-family: "Operetta12L", serif;
+  font-size: 1.1rem;
+  color: #5d4e37;
+  font-weight: 500;
+}
+
+.loading, .error, .no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-family: "Operetta12L", serif;
+  font-size: 1.2rem;
+  color: #8b7355;
+}
+
+.error {
+  color: #b85450;
+  background-color: #f8e8e7;
+  border: 1px solid #e8c1c0;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-results {
+  color: #a89078;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .seating-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .guest-card {
+    padding: 1.25rem;
+  }
+
+  .guest-name {
+    font-size: 1.3rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seating-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .seating-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+  }
+
+  .detail-value {
+    font-size: 1rem;
+  }
+}
