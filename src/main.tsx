@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Ha />} />
         <Route path="/seating" element={<Seating />} />
+        <Route path="*" element={<Ha />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
