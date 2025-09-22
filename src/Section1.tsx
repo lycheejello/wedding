@@ -14,6 +14,11 @@ export function Section1() {
       <div id="window-container">
         <img id="window" src={skiWindow} />
       </div>
+      <div id="rsvp-container">
+        <a href="https://partiful.com/e/mEnEf1sLrYUvrRhXnebr" target="_blank" rel="noopener noreferrer">
+          <button className="tea-ceremony-button">RSVP</button>
+        </a>
+      </div>
     </div>
   )
   }
