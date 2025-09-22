@@ -9,10 +9,10 @@ import bg4 from '@/assets/GraphicMid2.svg';
 function Ha() {
   return (
     <ParallaxContainer>
-      <ParallaxSection 
-        id="section1" 
-        backgroundImage={bgSki} 
-        speed={0.3} 
+      <ParallaxSection
+        id="section1"
+        backgroundImage={bgSki}
+        speed={0.3}
         bgSpeed={0.3}
         z={0}
       >
