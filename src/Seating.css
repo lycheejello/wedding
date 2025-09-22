@@ -59,8 +59,8 @@
 }
 
 .guest-card {
-  background: linear-gradient(135deg, #f8f5f0 0%, #ede4d3 100%);
-  border: 1px solid #d4c7b0;
+  background: #c8d6c3;
+  border: 1px solid #b5c4b0;
   border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -75,7 +75,7 @@
 .guest-name {
   font-family: "Audrey-Normal", serif;
   font-size: 1.5rem;
-  color: #5d4e37;
+  color: #1c292a;
   margin: 0 0 1rem 0;
   text-align: center;
   border-bottom: 2px solid #e0d4c0;
@@ -86,19 +86,22 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  text-align: center;
 }
 
 .detail-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem 0;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .detail-label {
   font-family: "Goku", sans-serif;
   font-size: 0.9rem;
-  color: #8b7355;
+  color: #1c292a;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -106,9 +109,14 @@
 
 .detail-value {
   font-family: "Operetta12L", serif;
-  font-size: 1.1rem;
-  color: #5d4e37;
-  font-weight: 500;
+  font-size: 1.3rem;
+  color: #1c292a;
+  font-weight: 700;
+}
+
+.table-number {
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .loading, .error, .no-results {
@@ -169,7 +177,7 @@
 
   .detail-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.25rem;
   }
 
@@ -178,6 +186,12 @@
   }
 
   .detail-value {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .table-number {
+    font-size: 2rem;
+    font-weight: 800;
   }
 }

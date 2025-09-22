@@ -120,7 +120,7 @@ const Seating: React.FC = () => {
                   <div className="guest-details">
                     <div className="detail-item">
                       <span className="detail-label">Table:</span>
-                      <span className="detail-value">{person.tableNumber}</span>
+                      <span className="detail-value table-number">{person.tableNumber}</span>
                     </div>
                     <div className="detail-item">
                       <span className="detail-label">Meal:</span>

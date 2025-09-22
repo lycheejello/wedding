@@ -1,0 +1,114 @@
+#qa-page {
+  min-height: 100vh;
+  background-color: #ede4d3;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#qa-text-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #c8d6c3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.qa-header-1 {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.qa-header-2 {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.qa-paragraph {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+.qa-paragraph-same-size {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+#qa-hotels-container {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.qa-hotel-section {
+  margin-bottom: 2rem;
+}
+
+.qa-hotel-name {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  margin: 0.8rem 0 0.2rem 0;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.qa-hotel-address {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 0.9rem;
+  margin: 0.2rem 0 0.8rem 0;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #1c292a;
+}
+
+@media (min-width: 800px) {
+  .qa-header-1 {
+    font-size: 2.5rem;
+  }
+
+  .qa-header-2 {
+    font-size: 1.2rem;
+  }
+
+  .qa-paragraph {
+    font-size: 1.2rem;
+  }
+
+  .qa-paragraph-same-size {
+    font-size: 1.2rem;
+  }
+
+  .qa-hotel-name {
+    font-size: 1.3rem;
+  }
+
+  .qa-hotel-address {
+    font-size: 1.1rem;
+  }
+}
