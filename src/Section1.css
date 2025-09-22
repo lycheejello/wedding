@@ -57,6 +57,15 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.1rem;
+  padding-bottom: 0.9rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 .tea-ceremony-button:hover {
@@ -87,8 +96,8 @@
   }
 
   .tea-ceremony-button {
-    font-size: 2rem;
-    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    padding: 1.2rem 2rem 0.8rem 2rem;
     border-radius: 3rem;
   }
 
