@@ -30,7 +30,7 @@ export function EventDate() {
         <p className="dateText inviteText">NOVEMBER</p>
         <p className="dateText inviteText">1ST, 2025</p>
         <p className="inviteText sm">AT</p>
-        <p className="dateText inviteText">4 PM</p>
+        <p className="dateText inviteText">3:30 PM</p>
       </div>
     )
 }
