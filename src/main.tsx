@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Ha from './Ha.tsx'
 import Seating from './Seating.tsx'
 import QA from './QA.tsx'
+import RSVP from './RSVP.tsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Ha />} />
         <Route path="/seating" element={<Seating />} />
         <Route path="/qa" element={<QA />} />
+        <Route path="/rsvp" element={<RSVP />} />
         <Route path="*" element={<Ha />} />
       </Routes>
     </BrowserRouter>

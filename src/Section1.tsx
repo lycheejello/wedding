@@ -20,7 +20,7 @@ export function Section1() {
         </a>
       </div>
       <div id="rsvp-container">
-        <a href="https://partiful.com/e/mEnEf1sLrYUvrRhXnebr" target="_blank" rel="noopener noreferrer">
+        <a href="/rsvp">
           <button className="tea-ceremony-button">RSVP</button>
         </a>
       </div>

@@ -17,42 +17,57 @@ const Seating: React.FC = () => {
   useEffect(() => {
     const loadSeatingData = async () => {
       try {
-        // Try to load XLSX file first
-        let response = await fetch('/seating.xlsx');
+        // Load data from Google Sheets
+        const GOOGLE_SHEET_URL = `https://docs.google.com/spreadsheets/d/1s5KTYmSj59qEJF8NerLRW9XU1Cv-CfNJE6dcdh9MQ6E/export?format=csv`;
 
+        const response = await fetch(GOOGLE_SHEET_URL);
         if (!response.ok) {
-          // Fallback to sample JSON data for testing
-          response = await fetch('/seating-sample.json');
-          if (!response.ok) {
-            throw new Error('Could not load seating data');
-          }
-
-          const jsonData = await response.json();
-          const formattedData: SeatingData[] = jsonData.map((row: any) => ({
-            name: row.name || row.Name || '',
-            tableNumber: String(row['table number'] || row['Table Number'] || ''),
-            mealChoice: row['meal choice'] || row['Meal Choice'] || row['meal choie'] || ''
-          }));
-
-          setSeatingData(formattedData);
-          return;
+          throw new Error('Could not load seating data from Google Sheets');
         }
 
-        // Process XLSX file
-        const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet) as any[];
+        const csvText = await response.text();
 
-        const formattedData: SeatingData[] = jsonData.map(row => ({
-          name: row.name || row.Name || '',
-          tableNumber: String(row['table number'] || row['Table Number'] || ''),
-          mealChoice: row['meal choice'] || row['Meal Choice'] || row['meal choie'] || ''
-        }));
+        // Parse CSV more carefully to handle quoted values and dates
+        const parseCSVLine = (line: string) => {
+          const values = [];
+          let current = '';
+          let inQuotes = false;
+
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+              inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+              values.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          values.push(current.trim());
+          return values;
+        };
+
+        const lines = csvText.split('\n').filter(line => line.trim());
+        const headers = parseCSVLine(lines[0]);
+
+        const formattedData: SeatingData[] = lines.slice(1).map(line => {
+          const values = parseCSVLine(line);
+          const row: any = {};
+          headers.forEach((header, index) => {
+            row[header] = values[index] || '';
+          });
+
+          return {
+            name: row.Name || row.name || '',
+            tableNumber: (row['Table Number'] || row['table number'] || row.tableNumber || '').trim() || 'TBD',
+            mealChoice: row['Meal Choice'] || row['meal choice'] || row.mealChoice || ''
+          };
+        }).filter(person => person.name); // Only include rows with names
 
         setSeatingData(formattedData);
       } catch (err) {
-        setError('Failed to load seating data. Please make sure the seating.xlsx file is available in the public folder.');
+        setError('Failed to load seating data from Google Sheets.');
         console.error('Error loading seating data:', err);
       } finally {
         setLoading(false);

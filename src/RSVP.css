@@ -1,0 +1,257 @@
+body:has(#rsvp-page) {
+  background-color: #c8d6c3;
+}
+
+#rsvp-page {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #c8d6c3;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#rsvp-form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #c8d6c3;
+}
+
+.rsvp-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rsvp-header-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+@media (min-width: 800px) {
+  .rsvp-header-image {
+    max-height: 500px;
+  }
+}
+
+.rsvp-header {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.rsvp-note {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 2px solid #a8b5a3;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.form-input[type="email"] {
+  font-family: Arial, sans-serif;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #1c292a;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.rsvp-submit-button {
+  background-color: #bea861;
+  font-size: 1.1rem;
+  font-family: "Audrey-Normal";
+  letter-spacing: 0.1rem;
+  color: #333;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.rsvp-submit-button:hover {
+  background-color: #d4c081;
+}
+
+.rsvp-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rsvp-submit-button:disabled:hover {
+  background-color: #bea861;
+}
+
+.submit-message {
+  font-family: "Audrey-Normal";
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.submit-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.rsvp-entry {
+  border: 2px solid #a8b5a3;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #a8b5a3;
+  padding-bottom: 0.5rem;
+}
+
+.entry-title {
+  font-family: "Audrey-Normal";
+  color: #1c292a;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.remove-entry-button {
+  background-color: #dc3545;
+  color: white;
+  font-family: "Audrey-Normal";
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-entry-button:hover {
+  background-color: #c82333;
+}
+
+.add-entry-button {
+  background-color: #bea861;
+  color: white;
+  font-family: "Audrey-Normal";
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.add-entry-button:hover {
+  background-color: #d4c081;
+}
+
+.add-entry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.add-entry-button:disabled:hover {
+  background-color: #bea861;
+}
+
+@media (min-width: 800px) {
+  .rsvp-header {
+    font-size: 2.5rem;
+  }
+
+  .form-label {
+    font-size: 1.3rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 1.1rem;
+  }
+
+  .rsvp-submit-button {
+    font-size: 1.3rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .entry-title {
+    font-size: 1.5rem;
+  }
+
+  .add-entry-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+
+  .remove-entry-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
