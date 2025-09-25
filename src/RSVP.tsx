@@ -177,6 +177,7 @@ function RSVP() {
                   <option value="short-ribs">Belgian Chimay Ale Braised Boneless Short Ribs</option>
                   <option value="branzino">Baked Branzino Fillet</option>
                   <option value="tofu-cake">Broccoli Tofu Cake (Vegan, Gluten-Free)</option>
+                  <option value="chicken-fingers">Chicken Fingers - Kids Meal</option>
                 </select>
               </div>
 

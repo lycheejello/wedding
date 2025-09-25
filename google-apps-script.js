@@ -59,6 +59,8 @@ function getMealChoiceDisplay(mealChoice) {
       return 'Baked Branzino Fillet';
     case 'tofu-cake':
       return 'Broccoli Tofu Cake (Vegan, Gluten-Free)';
+    case 'chicken-fingers':
+      return 'Chicken Fingers - Kids Meal';
     default:
       return mealChoice;
   }
