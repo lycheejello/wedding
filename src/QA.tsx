@@ -45,6 +45,7 @@ function QA() {
         <h1 className="qa-header-1">Important Information</h1>
         <p className="qa-paragraph">The ceremony will be held outdoor in <strong>Skirball's courtyard</strong> with the reception to follow in the <strong>Ballroom indoors</strong>.</p>
         <p className="qa-paragraph">Guests are invited to arrive at <strong>3:30pm</strong>. Please allow enough time to park and account for traffic. The ceremony will begin promptly at <strong>4:00pm</strong>.</p>
+        <p className="qa-paragraph">Complimentary on-site parking is available in the <strong>North Garage</strong>.</p>
 
         <h1 className="qa-header-1">Attire</h1>
         <h2 className="qa-header-2"><strong>Garden Formal</strong></h2>
