@@ -56,17 +56,22 @@ function QA() {
 
         <div className="menu-item">
           <h3 className="dish-name">Belgian Chimay Ale Braised Boneless Short Ribs</h3>
-          <p className="dish-description">with Walnut Mustard Sauce and Seasonal Vegetables</p>
+          <p className="dish-description">with Walnut Mustard Sauce<br />Seasonal Vegetables<br />Lyonnaise Potatoes</p>
         </div>
 
         <div className="menu-item">
           <h3 className="dish-name">Baked Branzino Fillet</h3>
-          <p className="dish-description">with Blistered Heirloom Cherry Tomatoes and Capers, Lemon Basil Garlic Orzo with Riced Vegetables</p>
+          <p className="dish-description">with Blistered Heirloom Cherry Tomatoes and Capers<br />Lemon Basil Garlic Orzo with Riced Vegetables</p>
         </div>
 
         <div className="menu-item">
           <h3 className="dish-name">Broccoli Tofu Cake</h3>
-          <p className="dish-description">on Roasted Spaghetti Squash with Tomatillo Sauce (Vegan, Gluten-Free)</p>
+          <p className="dish-description">on Roasted Spaghetti Squash with Tomatillo Sauce<br />(Vegan, Gluten-Free)</p>
+        </div>
+
+        <div className="menu-item">
+          <h3 className="dish-name">Chicken Fingers</h3>
+          <p className="dish-description">with Tater Tots<br />Seasonal Vegetables</p>
         </div>
 
         <QAHotels />
