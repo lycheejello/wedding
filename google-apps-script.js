@@ -13,28 +13,49 @@ function doPost(e) {
     // Parse the JSON data from the request
     var data = JSON.parse(e.postData.contents);
 
-    // Set up headers if this is the first submission
-    var lastRow = sheet.getLastRow();
-    if (lastRow === 0) {
-      sheet.getRange(1, 1, 1, 7).setValues([
-        ['Timestamp', 'Name', 'Email', 'Meal Choice', 'Dietary Restrictions', 'Submission ID', 'Submission Date']
-      ]);
-      lastRow = 1;
+    // Log the incoming request for debugging
+    console.log('RSVP submission received:', JSON.stringify(data));
+
+    // Use lock service to prevent race conditions
+    var lock = LockService.getScriptLock();
+    try {
+      // Wait up to 10 seconds for lock
+      lock.waitLock(10000);
+    } catch (lockError) {
+      console.error('Could not obtain lock:', lockError.toString());
+      throw new Error('Server busy, please try again');
     }
 
-    // Get meal choice display name
-    var mealChoiceDisplay = getMealChoiceDisplay(data.mealChoice);
+    try {
+      // Set up headers if this is the first submission
+      var lastRow = sheet.getLastRow();
+      if (lastRow === 0) {
+        sheet.getRange(1, 1, 1, 7).setValues([
+          ['Timestamp', 'Name', 'Email', 'Meal Choice', 'Dietary Restrictions', 'Submission ID', 'Submission Date']
+        ]);
+        lastRow = 1;
+      }
 
-    // Add the new RSVP data
-    sheet.getRange(lastRow + 1, 1, 1, 7).setValues([[
-      data.timestamp,
-      data.name,
-      data.email,
-      mealChoiceDisplay,
-      data.dietaryRestrictions || 'None',
-      data.submissionId,
-      new Date()
-    ]]);
+      // Get meal choice display name
+      var mealChoiceDisplay = getMealChoiceDisplay(data.mealChoice);
+
+      // Use appendRow for better reliability instead of manual row calculation
+      sheet.appendRow([
+        data.timestamp,
+        data.name,
+        data.email || '',
+        mealChoiceDisplay,
+        data.dietaryRestrictions || 'None',
+        data.submissionId,
+        new Date()
+      ]);
+
+      console.log('RSVP successfully recorded for:', data.name);
+
+    } finally {
+      // Always release the lock
+      lock.releaseLock();
+    }
 
     // Return success response
     return ContentService.createTextOutput(JSON.stringify({
@@ -43,6 +64,7 @@ function doPost(e) {
     })).setMimeType(ContentService.MimeType.JSON);
 
   } catch (error) {
+    console.error('Error processing RSVP:', error.toString());
     // Return error response
     return ContentService.createTextOutput(JSON.stringify({
       status: 'error',

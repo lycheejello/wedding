@@ -63,23 +63,33 @@ function RSVP() {
       // Generate a submission ID for this group of RSVPs
       const submissionId = Date.now().toString()
 
-      // Submit each RSVP entry as a separate request
-      const submissionPromises = rsvpEntries.map(entry =>
-        fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: JSON.stringify({
-            name: entry.name,
-            email: entry.email,
-            mealChoice: entry.mealChoice,
-            dietaryRestrictions: entry.dietaryRestrictions,
-            submissionId: submissionId,
-            timestamp: new Date().toISOString()
-          })
-        })
-      )
+      // Submit each RSVP entry sequentially with a small delay to prevent race conditions
+      for (let i = 0; i < rsvpEntries.length; i++) {
+        const entry = rsvpEntries[i]
 
-      await Promise.all(submissionPromises)
+        try {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify({
+              name: entry.name,
+              email: entry.email,
+              mealChoice: entry.mealChoice,
+              dietaryRestrictions: entry.dietaryRestrictions,
+              submissionId: submissionId,
+              timestamp: new Date().toISOString()
+            })
+          })
+
+          // Add a small delay between submissions to prevent race conditions
+          if (i < rsvpEntries.length - 1) {
+            await new Promise(resolve => setTimeout(resolve, 200))
+          }
+        } catch (entryError) {
+          console.error(`Error submitting RSVP for ${entry.name}:`, entryError)
+          // Continue with other entries even if one fails
+        }
+      }
 
       // Reset form on success
       setSubmitMessage(`Thank you! We have received ${rsvpEntries.length} RSVP${rsvpEntries.length > 1 ? 's' : ''}.`)
