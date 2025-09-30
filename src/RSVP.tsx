@@ -62,37 +62,58 @@ function RSVP() {
     try {
       // Generate a submission ID for this group of RSVPs
       const submissionId = Date.now().toString()
+      const successfulSubmissions: string[] = []
+      const failedSubmissions: string[] = []
 
-      // Submit each RSVP entry as a separate request
-      const submissionPromises = rsvpEntries.map(entry =>
-        fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: entry.name,
-            email: entry.email,
-            mealChoice: entry.mealChoice,
-            dietaryRestrictions: entry.dietaryRestrictions,
-            submissionId: submissionId,
-            timestamp: new Date().toISOString()
+      // Submit each RSVP entry as a separate request with proper error handling
+      for (const entry of rsvpEntries) {
+        try {
+          const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: entry.name,
+              email: entry.email,
+              mealChoice: entry.mealChoice,
+              dietaryRestrictions: entry.dietaryRestrictions,
+              submissionId: submissionId,
+              timestamp: new Date().toISOString()
+            })
           })
-        })
-      )
 
-      await Promise.all(submissionPromises)
+          // Check if the response is ok
+          if (response.ok) {
+            successfulSubmissions.push(entry.name)
+          } else {
+            console.error(`Failed to submit RSVP for ${entry.name}:`, response.status, response.statusText)
+            failedSubmissions.push(entry.name)
+          }
+        } catch (entryError) {
+          console.error(`Error submitting RSVP for ${entry.name}:`, entryError)
+          failedSubmissions.push(entry.name)
+        }
+      }
 
-      // Reset form on success
-      setSubmitMessage(`Thank you! We have received ${rsvpEntries.length} RSVP${rsvpEntries.length > 1 ? 's' : ''}.`)
-      setRsvpEntries([{
-        id: '1',
-        name: '',
-        email: '',
-        mealChoice: '',
-        dietaryRestrictions: ''
-      }])
+      // Provide detailed feedback based on submission results
+      if (failedSubmissions.length === 0) {
+        // All submissions successful
+        setSubmitMessage(`Thank you! We have received ${successfulSubmissions.length} RSVP${successfulSubmissions.length > 1 ? 's' : ''}.`)
+        setRsvpEntries([{
+          id: '1',
+          name: '',
+          email: '',
+          mealChoice: '',
+          dietaryRestrictions: ''
+        }])
+      } else if (successfulSubmissions.length === 0) {
+        // All submissions failed
+        setSubmitMessage('Sorry, there was an error submitting your RSVP. Please try again.')
+      } else {
+        // Partial success
+        setSubmitMessage(`Partially successful: ${successfulSubmissions.length} RSVP(s) submitted successfully, but ${failedSubmissions.length} failed (${failedSubmissions.join(', ')}). Please try resubmitting the failed entries.`)
+      }
 
     } catch (error) {
       console.error('Error submitting RSVP:', error)
