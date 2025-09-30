@@ -36,42 +36,19 @@ function doPost(e) {
       new Date()
     ]]);
 
-    // Return success response with CORS headers
+    // Return success response
     return ContentService.createTextOutput(JSON.stringify({
       status: 'success',
       message: 'RSVP submitted successfully'
-    }))
-    .setMimeType(ContentService.MimeType.JSON)
-    .setHeaders({
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    });
+    })).setMimeType(ContentService.MimeType.JSON);
 
   } catch (error) {
-    // Return error response with CORS headers
+    // Return error response
     return ContentService.createTextOutput(JSON.stringify({
       status: 'error',
       message: 'Error processing RSVP: ' + error.toString()
-    }))
-    .setMimeType(ContentService.MimeType.JSON)
-    .setHeaders({
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    });
+    })).setMimeType(ContentService.MimeType.JSON);
   }
-}
-
-// Handle preflight OPTIONS request for CORS
-function doOptions(e) {
-  return ContentService.createTextOutput('')
-    .setMimeType(ContentService.MimeType.TEXT)
-    .setHeaders({
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    });
 }
 
 function getMealChoiceDisplay(mealChoice) {

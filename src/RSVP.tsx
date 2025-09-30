@@ -67,9 +67,7 @@ function RSVP() {
       const submissionPromises = rsvpEntries.map(entry =>
         fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          mode: 'no-cors',
           body: JSON.stringify({
             name: entry.name,
             email: entry.email,
