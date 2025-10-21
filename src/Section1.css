@@ -40,16 +40,8 @@
   justify-content: center;
   position: absolute;
   bottom: 30%;
-  left: 15%;
-  width: 30%;
-}
-
-#rsvp-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 30%;
-  right: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 30%;
 }
 
@@ -103,13 +95,8 @@ a {
 
   #qa-button-container {
     bottom: 35%;
-    left: 37%;
-    width: 15%;
-  }
-
-  #rsvp-container {
-    bottom: 35%;
-    right: 37%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 15%;
   }
 

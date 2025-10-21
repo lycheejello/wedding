@@ -19,11 +19,6 @@ export function Section1() {
           <button className="tea-ceremony-button">Q+A</button>
         </a>
       </div>
-      <div id="rsvp-container">
-        <a href="/rsvp">
-          <button className="tea-ceremony-button">RSVP</button>
-        </a>
-      </div>
     </div>
   )
   }
