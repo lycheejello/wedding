@@ -79,8 +79,10 @@ const Seating: React.FC = () => {
   const filteredData = useMemo(() => {
     if (!searchTerm.trim()) return seatingData;
 
+    const search = searchTerm.toLowerCase();
     return seatingData.filter(person =>
-      person.name.toLowerCase().includes(searchTerm.toLowerCase())
+      person.name.toLowerCase().includes(search) ||
+      person.tableNumber.toLowerCase().includes(search)
     );
   }, [seatingData, searchTerm]);
 
@@ -114,7 +116,7 @@ const Seating: React.FC = () => {
         <div className="search-section">
           <input
             type="text"
-            placeholder="Search by name..."
+            placeholder="Search by name or table number..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
