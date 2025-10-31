@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './Seating.css';
+import seatingLayoutImg from '@/assets/seating-layout.png';
 
 interface SeatingData {
   name: string;
@@ -112,6 +113,14 @@ const Seating: React.FC = () => {
     <div className="seating-container">
       <div className="seating-content">
         <h1>Seating Assignments</h1>
+
+        <div className="seating-diagram-section">
+          <img
+            src={seatingLayoutImg}
+            alt="Ahmanson Ballroom Seating Layout"
+            className="seating-diagram"
+          />
+        </div>
 
         <div className="search-section">
           <input

@@ -18,6 +18,30 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
+.seating-diagram-section {
+  margin: 2rem 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seating-diagram {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border: 3px solid #c4b69c;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seating-diagram:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
 .search-section {
   margin-bottom: 3rem;
   display: flex;
@@ -146,6 +170,15 @@
     font-size: 2.5rem;
   }
 
+  .seating-diagram-section {
+    margin: 1.5rem 0 2rem;
+  }
+
+  .seating-diagram {
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
   .results-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -173,6 +206,14 @@
   .seating-content h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+  }
+
+  .seating-diagram-section {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .seating-diagram {
+    border-radius: 8px;
   }
 
   .detail-item {
